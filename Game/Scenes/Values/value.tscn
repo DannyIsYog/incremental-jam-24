@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://co4g81q551wxj"]
+
+[ext_resource type="Script" path="res://Game/Scripts/Values/value.gd" id="1_gtdtl"]
+
+[node name="Value" type="Node"]
+script = ExtResource("1_gtdtl")

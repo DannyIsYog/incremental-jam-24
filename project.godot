@@ -11,5 +11,10 @@ config_version=5
 [application]
 
 config/name="Incremental-Jam-24"
+run/main_scene="res://Game/Scenes/MainScene.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Values="*res://Game/Scenes/Values/values.tscn"
