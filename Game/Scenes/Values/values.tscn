@@ -21,3 +21,5 @@ script = ExtResource("1_k5arm")
 [node name="StoneSellValue" parent="." instance=ExtResource("1_r6ueo")]
 
 [node name="Protection" parent="." instance=ExtResource("1_r6ueo")]
+base_value = 0.0
+multiplier_value = 0.0

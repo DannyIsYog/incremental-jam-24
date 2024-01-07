@@ -10,6 +10,8 @@ floors_scene = ExtResource("2_gwkr1")
 [node name="floors" type="Node2D" parent="."]
 
 [node name="towerText" type="RichTextLabel" parent="."]
-offset_right = 40.0
+offset_left = -83.0
+offset_right = -43.0
 offset_bottom = 40.0
-text = "100"
+bbcode_enabled = true
+text = "0"

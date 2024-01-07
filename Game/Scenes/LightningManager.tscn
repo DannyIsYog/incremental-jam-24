@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ciutgyxd7mf0m"]
+
+[ext_resource type="Script" path="res://Game/Scripts/lightning_manager.gd" id="1_48lbs"]
+
+[node name="LightningManager" type="Node2D"]
+script = ExtResource("1_48lbs")

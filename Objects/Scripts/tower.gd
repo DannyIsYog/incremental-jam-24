@@ -1,5 +1,7 @@
 extends Node2D
 
+class_name Tower
+
 @onready var current_floor_completion : float = 0.0
 @onready var floors = $floors
 @onready var text = $towerText
@@ -8,9 +10,6 @@ extends Node2D
 
 var stone_needed_per_floor : float = 100.0
 var floors_instances = []
-
-func _ready():
-	update_text()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -40,7 +39,11 @@ func remove_floor() -> void:
 	current_floor_completion = 0
 	update_text()
 	
-	floors_instances.pop_back().queue_free()
+	if floors_instances.size() > 0:
+		floors_instances.pop_back().queue_free()
 
-func update_text() -> void:
+func update_text() -> void: 
 	text.text = str(current_floor_completion)
+
+func get_height() -> int:
+	return floors_instances.size()
