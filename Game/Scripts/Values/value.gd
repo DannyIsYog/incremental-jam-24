@@ -1,5 +1,7 @@
 extends Node
 
+class_name Value
+
 @export var base_value:= 1.0
 @export var multiplier_value:= 1.0
 @export var total_value:= 1.0
