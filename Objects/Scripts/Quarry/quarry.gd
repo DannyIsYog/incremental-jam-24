@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name  Quarry
 
 #Size of the pile
 @export var pile_size:= 0

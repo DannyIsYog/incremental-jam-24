@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://ciymabsx72kes"]
+
+[ext_resource type="Script" path="res://Objects/Scripts/Miner.gd" id="1_iolpa"]
+[ext_resource type="Texture2D" uid="uid://bnwvafghwlv86" path="res://Assets/Sprite_sheet_02.png" id="2_8prd8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l832l"]
+atlas = ExtResource("2_8prd8")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35lcn"]
+atlas = ExtResource("2_8prd8")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fydin"]
+atlas = ExtResource("2_8prd8")
+region = Rect2(16, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0cteq"]
+atlas = ExtResource("2_8prd8")
+region = Rect2(24, 0, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4gbch"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l832l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35lcn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fydin")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0cteq")
+}],
+"loop": true,
+"name": &"Mine",
+"speed": 4.0
+}]
+
+[node name="Miner" type="Node2D"]
+script = ExtResource("1_iolpa")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4gbch")
+animation = &"Mine"
+autoplay = "Mine"
+frame_progress = 0.858988
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
