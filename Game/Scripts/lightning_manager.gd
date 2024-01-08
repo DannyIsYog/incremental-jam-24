@@ -16,15 +16,10 @@ func _process(delta):
 		time = 0
 
 func check_lightning():
-	print("Checking Lightning")
 	var probability = get_lightning_probability()
 	var dice = RandomNumberGenerator.new().randf_range(0.0, 1.0)
 	
-	print("Probability: " + str(probability))
-	print("Dice: " + str(dice))
-	
 	if dice < probability:
-		print("Removing Floor")
 		tower.remove_floor()
 
 func get_lightning_base_probability():

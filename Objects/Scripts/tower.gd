@@ -32,7 +32,10 @@ func check_floor_completion() -> void:
 func add_floor(floor : int) -> void:
 	var temp_floor = floors_scene.instantiate() as Floor
 	floors_instances.append(temp_floor)
-	temp_floor.position = Vector2(position.x, position.y - temp_floor.get_floor_height() * floors_instances.size())
+	temp_floor.position = Vector2(0, 0 - (temp_floor.get_floor_height()-2) * floors_instances.size())
+	print(temp_floor.position)
+	print(self.position.x)
+	print(self.position.y)
 	floors.call_deferred("add_child", temp_floor)
 
 func remove_floor() -> void:

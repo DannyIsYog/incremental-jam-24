@@ -1,16 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://isxf8l7s834a"]
+[gd_scene load_steps=5 format=3 uid="uid://isxf8l7s834a"]
 
 [ext_resource type="PackedScene" uid="uid://c2juilqsgan7t" path="res://Game/Scenes/Quarry/quarry.tscn" id="1_1etx6"]
 [ext_resource type="PackedScene" uid="uid://ciutgyxd7mf0m" path="res://Game/Scenes/LightningManager.tscn" id="2_j3ykr"]
-[ext_resource type="PackedScene" uid="uid://dw8dmn7yw0cgi" path="res://Objects/Scenes/Tower.tscn" id="3_7plts"]
+[ext_resource type="PackedScene" uid="uid://dw8dmn7yw0cgi" path="res://Objects/Scenes/Tower/Tower.tscn" id="3_7plts"]
+[ext_resource type="PackedScene" uid="uid://bvr6sgkg5c7vx" path="res://Game/Scenes/UI.tscn" id="4_87ur8"]
 
 [node name="MainScene" type="Node2D"]
 
 [node name="Quarry" parent="." instance=ExtResource("1_1etx6")]
-position = Vector2(1012, 517)
+position = Vector2(172, 66)
 
 [node name="LightningManager" parent="." node_paths=PackedStringArray("tower") instance=ExtResource("2_j3ykr")]
 tower = NodePath("../Tower")
 
 [node name="Tower" parent="." instance=ExtResource("3_7plts")]
-position = Vector2(98, 608)
+position = Vector2(60, 135)
+
+[node name="Ui" parent="." instance=ExtResource("4_87ur8")]

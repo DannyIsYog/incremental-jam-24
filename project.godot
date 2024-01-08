@@ -19,6 +19,12 @@ config/icon="res://icon.svg"
 
 Values="*res://Game/Scenes/Values/values.tscn"
 
+[display]
+
+window/size/viewport_width=240
+window/size/viewport_height=135
+window/stretch/mode="viewport"
+
 [input]
 
 mine={

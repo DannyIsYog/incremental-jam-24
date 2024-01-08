@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bs6rwfakxhiga"]
+
+[ext_resource type="Script" path="res://Objects/Scripts/floor.gd" id="1_hlfsc"]
+[ext_resource type="Texture2D" uid="uid://1w3fag6thltr" path="res://Assets/Towers_floor_1.png" id="2_0keah"]
+
+[node name="Floor" type="Node2D"]
+script = ExtResource("1_hlfsc")
+
+[node name="FloorSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_0keah")
