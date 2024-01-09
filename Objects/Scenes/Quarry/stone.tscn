@@ -1,11 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddgkfxl1ljcbr"]
+[gd_scene load_steps=6 format=3 uid="uid://ddgkfxl1ljcbr"]
 
 [ext_resource type="Script" path="res://Objects/Scripts/Quarry/stone.gd" id="1_jhify"]
 [ext_resource type="Texture2D" uid="uid://dfltmsblbvs7q" path="res://icon.svg" id="2_j6bm8"]
+[ext_resource type="Shader" path="res://Objects/Scenes/Quarry/stone.gdshader" id="2_nuuoy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_clo5r"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_i5ols"]
+shader = ExtResource("2_nuuoy")
+shader_parameter/color = null
 
 [node name="Stone" type="CharacterBody2D"]
 scale = Vector2(0.02, 0.02)
