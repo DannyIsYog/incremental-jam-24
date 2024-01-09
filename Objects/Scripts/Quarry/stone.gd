@@ -13,8 +13,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
 	var rng = RandomNumberGenerator.new()
-	velocity.x = rng.randf_range(-50,-300)
-	velocity.y = rng.randf_range(-200,-300)
+	velocity.x = rng.randf_range(-30,30)
+	velocity.y = rng.randf_range(-80,-130)
 
 func _physics_process(delta):
 	if not is_on_floor():

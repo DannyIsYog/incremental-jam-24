@@ -1,16 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://ddgkfxl1ljcbr"]
+[gd_scene load_steps=5 format=3 uid="uid://ddgkfxl1ljcbr"]
 
 [ext_resource type="Script" path="res://Objects/Scripts/Quarry/stone.gd" id="1_jhify"]
 [ext_resource type="Texture2D" uid="uid://dfltmsblbvs7q" path="res://icon.svg" id="2_j6bm8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_clo5r"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i5ols"]
+
 [node name="Stone" type="CharacterBody2D"]
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.02, 0.02)
+collision_mask = 2
 script = ExtResource("1_jhify")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_clo5r")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_i5ols")
 texture = ExtResource("2_j6bm8")

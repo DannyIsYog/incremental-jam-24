@@ -1,14 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://isxf8l7s834a"]
+[gd_scene load_steps=9 format=3 uid="uid://isxf8l7s834a"]
 
 [ext_resource type="PackedScene" uid="uid://c2juilqsgan7t" path="res://Objects/Scenes/Quarry/quarry.tscn" id="1_1etx6"]
 [ext_resource type="PackedScene" uid="uid://ciutgyxd7mf0m" path="res://Game/Scenes/LightningManager.tscn" id="2_j3ykr"]
 [ext_resource type="PackedScene" uid="uid://dw8dmn7yw0cgi" path="res://Objects/Scenes/Tower/Tower.tscn" id="3_7plts"]
 [ext_resource type="PackedScene" path="res://Game/Scenes/UI.tscn" id="4_87ur8"]
+[ext_resource type="Texture2D" uid="uid://dyajlqd551gva" path="res://Assets/Background/seamless_ground.png" id="5_3kn4n"]
+[ext_resource type="Texture2D" uid="uid://bqy7r40s3k53f" path="res://Assets/Background/skies2.png" id="6_3iq05"]
+[ext_resource type="Texture2D" uid="uid://dyxc0kgp4qxnm" path="res://Assets/Background/structures.png" id="7_0jp3h"]
+[ext_resource type="Texture2D" uid="uid://diff15wuf6dwf" path="res://Assets/Background/ground_with_structures.png" id="8_o74i2"]
 
 [node name="MainScene" type="Node2D"]
 
 [node name="Quarry" parent="." instance=ExtResource("1_1etx6")]
-position = Vector2(215, 77)
+position = Vector2(205, 77)
 
 [node name="LightningManager" parent="." node_paths=PackedStringArray("tower") instance=ExtResource("2_j3ykr")]
 tower = NodePath("../Tower")
@@ -17,3 +21,24 @@ tower = NodePath("../Tower")
 position = Vector2(50, 135)
 
 [node name="Ui" parent="." instance=ExtResource("4_87ur8")]
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="SeamlessGround" type="Sprite2D" parent="Background"]
+z_index = -100
+position = Vector2(480, -135)
+texture = ExtResource("5_3kn4n")
+
+[node name="Skies2" type="Sprite2D" parent="Background"]
+z_index = -150
+position = Vector2(240, -136)
+texture = ExtResource("6_3iq05")
+
+[node name="Structures" type="Sprite2D" parent="."]
+position = Vector2(240, -134)
+texture = ExtResource("7_0jp3h")
+
+[node name="GroundWithStructures" type="Sprite2D" parent="."]
+z_index = -90
+position = Vector2(240, -135)
+texture = ExtResource("8_o74i2")

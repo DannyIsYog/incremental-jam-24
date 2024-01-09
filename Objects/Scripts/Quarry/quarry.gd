@@ -16,10 +16,10 @@ func _input(event):
 	if event is InputEventMouseButton:
 		if event.is_pressed() && mouse_in:
 			print("Click Value:", Values.click_value.total_value)
-			mine_stone(Values.click_value.total_value)
+			mine_stone(Values.click_value.total_value, get_global_mouse_position())
 			
 #TODO figure out what to do in case of shit ton of stones per sec
-func mine_stone(amount):
+func mine_stone(amount, spawnPosition):
 	var rng = RandomNumberGenerator.new()
 	while amount > 0:
 		#Intantiate New Stone
@@ -28,9 +28,7 @@ func mine_stone(amount):
 		pile.call_deferred("add_child", new_stone)
 		pile_size += 1
 		#Randomize Height
-		rng.randomize()
-		var height = rng.randf_range(-40,64)
-		new_stone.position = Vector2(position.x - 65, position.y - height)
+		new_stone.position = Vector2(spawnPosition.x, spawnPosition.y)
 		#Set Erosion Value
 		new_stone.erosion_value = Values.erosion_value.total_value
 		amount -= 1
