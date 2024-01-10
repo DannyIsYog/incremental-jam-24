@@ -21,8 +21,6 @@ tower = NodePath("../Tower")
 [node name="Tower" parent="." instance=ExtResource("3_7plts")]
 position = Vector2(50, 135)
 
-[node name="Ui" parent="." instance=ExtResource("4_87ur8")]
-
 [node name="Background" type="Node2D" parent="."]
 
 [node name="SeamlessGround" type="Sprite2D" parent="Background"]
@@ -47,3 +45,6 @@ texture = ExtResource("8_o74i2")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(120, 68)
 script = ExtResource("9_uwiqw")
+
+[node name="Ui" parent="Camera2D" instance=ExtResource("4_87ur8")]
+position = Vector2(-120, -68)
