@@ -23,7 +23,10 @@ func check_lightning():
 		tower.remove_floor()
 
 func get_lightning_base_probability():
-	return (pow(MATH_CONSTANT_E, tower.get_height()/10)/15)-(1/15)
+	var a = pow(MATH_CONSTANT_E, (tower.get_height()/10.0)) # e^(x/10)
+	var b = a / 15.0 # (e^(x/10))/15
+	var c = b - (1.0/5.0) # ((e^(x/10))/15) - (1/5)
+	return c
 
 func get_lightning_probability():
 	return get_lightning_base_probability() - Values.protection.total_value
