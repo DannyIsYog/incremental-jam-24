@@ -10,7 +10,7 @@ func _process(delta):
 			
 		var last_floor_y = tower.floors_instances[-1].global_position.y
 		
-		if last_floor_y < original_position.y:
+		if last_floor_y < 0:
 			position.y = last_floor_y
 		else:
 			position = original_position
