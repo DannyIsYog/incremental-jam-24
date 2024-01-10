@@ -1,9 +1,6 @@
 extends Node
 
-@onready var silver_coins : Value = $SilverCoins
 @onready var silver_coins_earn_rate : Value = $SilverCoinsEarnRate
-
-@onready var divine_coins : Value = $DivineCoins
 @onready var divine_coins_earn_rate : Value = $DivineCoinsEarnRate
 
 @onready var mine_speed : Value = $MineSpeed

@@ -6,17 +6,9 @@
 [node name="Values" type="Node"]
 script = ExtResource("1_k5arm")
 
-[node name="SilverCoins" parent="." instance=ExtResource("1_r6ueo")]
-base_value = 0.0
-
 [node name="SilverCoinsEarnRate" parent="." instance=ExtResource("1_r6ueo")]
-base_value = 0.0
-
-[node name="DivineCoins" parent="." instance=ExtResource("1_r6ueo")]
-base_value = 0.0
 
 [node name="DivineCoinsEarnRate" parent="." instance=ExtResource("1_r6ueo")]
-base_value = 0.0
 
 [node name="MineSpeed" parent="." instance=ExtResource("1_r6ueo")]
 
