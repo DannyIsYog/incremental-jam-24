@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dfltmsblbvs7q" path="res://icon.svg" id="1_0mgcj"]
 
 [node name="Ui" type="Node2D"]
+z_index = 100
 
 [node name="Icon" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 1, 1)

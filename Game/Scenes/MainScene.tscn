@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c2juilqsgan7t" path="res://Objects/Scenes/Quarry/quarry.tscn" id="1_1etx6"]
 [ext_resource type="PackedScene" uid="uid://ciutgyxd7mf0m" path="res://Game/Scenes/LightningManager.tscn" id="2_j3ykr"]
 [ext_resource type="PackedScene" uid="uid://dw8dmn7yw0cgi" path="res://Objects/Scenes/Tower/Tower.tscn" id="3_7plts"]
-[ext_resource type="PackedScene" path="res://Game/Scenes/UI.tscn" id="4_87ur8"]
+[ext_resource type="PackedScene" uid="uid://bvr6sgkg5c7vx" path="res://Game/Scenes/UI.tscn" id="4_87ur8"]
 [ext_resource type="Texture2D" uid="uid://dyajlqd551gva" path="res://Assets/Background/seamless_ground.png" id="5_3kn4n"]
 [ext_resource type="Texture2D" uid="uid://bqy7r40s3k53f" path="res://Assets/Background/skies2.png" id="6_3iq05"]
 [ext_resource type="Texture2D" uid="uid://dyxc0kgp4qxnm" path="res://Assets/Background/structures.png" id="7_0jp3h"]
