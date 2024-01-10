@@ -8,9 +8,11 @@ class_name Value
 
 func update_bv(value):
 	base_value = base_value + value
+	updateTotalValue()
 	
 func update_multiplier(value):
 	multiplier_value = multiplier_value + value
+	updateTotalValue()
 	
 func _ready():
 	updateTotalValue()
