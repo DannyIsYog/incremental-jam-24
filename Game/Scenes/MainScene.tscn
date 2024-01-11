@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://isxf8l7s834a"]
+[gd_scene load_steps=12 format=3 uid="uid://isxf8l7s834a"]
 
 [ext_resource type="PackedScene" uid="uid://c2juilqsgan7t" path="res://Objects/Scenes/Quarry/quarry.tscn" id="1_1etx6"]
 [ext_resource type="Script" path="res://Game/Scripts/game_manager.gd" id="1_46ufe"]
@@ -9,12 +9,13 @@
 [ext_resource type="Texture2D" uid="uid://bqy7r40s3k53f" path="res://Assets/Background/skies2.png" id="6_3iq05"]
 [ext_resource type="Texture2D" uid="uid://dyxc0kgp4qxnm" path="res://Assets/Background/structures.png" id="7_0jp3h"]
 [ext_resource type="Texture2D" uid="uid://diff15wuf6dwf" path="res://Assets/Background/ground_with_structures.png" id="8_o74i2"]
+[ext_resource type="PackedScene" uid="uid://dd5ufnsu5cdyy" path="res://Objects/Scenes/Transporter.tscn" id="9_lfpmi"]
 [ext_resource type="Script" path="res://Game/Scripts/camera.gd" id="9_uwiqw"]
 
 [node name="GameManager" type="Node2D"]
 script = ExtResource("1_46ufe")
 
-[node name="Quarry" parent="." instance=ExtResource("1_1etx6")]
+[node name="Quarry" parent="." groups=["Quarry"] instance=ExtResource("1_1etx6")]
 position = Vector2(205, 77)
 
 [node name="LightningManager" parent="." node_paths=PackedStringArray("tower") instance=ExtResource("2_j3ykr")]
@@ -43,6 +44,9 @@ texture = ExtResource("7_0jp3h")
 z_index = -90
 position = Vector2(240, -135)
 texture = ExtResource("8_o74i2")
+
+[node name="Transporter" parent="." instance=ExtResource("9_lfpmi")]
+position = Vector2(90, 121)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(120, 68)
