@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Value" load_steps=2 format=3 uid="uid://dashok0ksjr1p"]
+
+[ext_resource type="Script" path="res://Game/Scripts/Values/value.gd" id="1_wgsq5"]
+
+[resource]
+script = ExtResource("1_wgsq5")
+base_value = 1.0
+multiplier_value = 1.0
+total_value = 1.0
+level = 0
+upgrade_bv_growth = 1
+upgrade_multiplier_growth = 1
+level_growth = 1

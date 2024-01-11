@@ -6,6 +6,7 @@ const MATH_CONSTANT_E = 2.718282
 const CHECK_LIGHTNING_TIME = 1.0 #1 second
 
 @export var tower : Tower
+@export var protection : Value
 
 var time = 0
 
@@ -29,4 +30,4 @@ func get_lightning_base_probability():
 	return c
 
 func get_lightning_probability():
-	return get_lightning_base_probability() - Values.protection.total_value
+	return get_lightning_base_probability() - protection.total_value

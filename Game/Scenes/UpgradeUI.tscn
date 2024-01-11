@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://blbhxo63o86s6"]
+
+[ext_resource type="Texture2D" uid="uid://dfltmsblbvs7q" path="res://icon.svg" id="1_b7nss"]
+[ext_resource type="Script" path="res://Game/Scripts/UpgradeUI.gd" id="1_taib5"]
+[ext_resource type="FontFile" uid="uid://m8rfsrvpd8bu" path="res://Assets/EaseOfUse.ttf" id="2_3tan2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ye3f7"]
+size = Vector2(187, 32)
+
+[node name="UpgradeUI" type="Node2D"]
+script = ExtResource("1_taib5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-58, 0)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_b7nss")
+
+[node name="towerText" type="RichTextLabel" parent="."]
+offset_left = -35.0
+offset_top = -15.0
+offset_right = 108.0
+offset_bottom = 16.0
+theme_override_fonts/normal_font = ExtResource("2_3tan2")
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "Mine: +1 Click Value"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(19.5, 0)
+shape = SubResource("RectangleShape2D_ye3f7")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_mouse_exited"]

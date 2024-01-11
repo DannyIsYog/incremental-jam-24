@@ -8,6 +8,9 @@ class_name  Quarry
 #Bool for mouse hovering the quarry
 var mouse_in = false
 
+@export var click_value : Value
+@export var erosion_value : Value
+
 #Stones to spawn
 @export var stone_scene : PackedScene
 
@@ -15,8 +18,8 @@ var mouse_in = false
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.is_pressed() && mouse_in:
-			print("Click Value:", Values.click_value.total_value)
-			mine_stone(Values.click_value.total_value, get_global_mouse_position())
+			print("Click Value:", click_value.total_value)
+			mine_stone(click_value.total_value, get_global_mouse_position())
 			
 #TODO figure out what to do in case of shit ton of stones per sec
 func mine_stone(amount, spawnPosition):
@@ -30,7 +33,7 @@ func mine_stone(amount, spawnPosition):
 		#Randomize Height
 		new_stone.position = Vector2(spawnPosition.x, spawnPosition.y)
 		#Set Erosion Value
-		new_stone.erosion_value = Values.erosion_value.total_value
+		new_stone.erosion_value = erosion_value.total_value
 		amount -= 1
 	pass
 

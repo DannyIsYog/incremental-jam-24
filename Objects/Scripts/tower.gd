@@ -11,6 +11,9 @@ class_name Tower
 var stone_needed_per_floor : float = 100.0
 var floors_instances = []
 
+@export var silver_coins_earn_rate : Value
+@export var divine_coins_earn_rate : Value
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_pressed("mine"):
@@ -21,7 +24,7 @@ func _process(delta):
 
 func add_stone(stone_to_add : float) -> void:
 	current_floor_completion += stone_to_add
-	game_manager.silver_coins += stone_to_add * Values.silver_coins_earn_rate.total_value
+	game_manager.silver_coins += stone_to_add * silver_coins_earn_rate.total_value
 	check_floor_completion()
 		
 func check_floor_completion() -> void:
@@ -42,7 +45,7 @@ func remove_floor() -> void:
 	
 	if floors_instances.size() > 0:
 		floors_instances.pop_back().queue_free()
-		game_manager.divine_coins += Values.divine_coins_earn_rate.total_value
+		game_manager.divine_coins += divine_coins_earn_rate.total_value
 
 func update_text() -> void: 
 	text.text = str(current_floor_completion)

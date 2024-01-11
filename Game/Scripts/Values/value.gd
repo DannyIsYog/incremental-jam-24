@@ -1,10 +1,16 @@
-extends Node
+extends Resource
 
 class_name Value
 
-@export var base_value:= 1.0
-@export var multiplier_value:= 1.0
-@export var total_value:= 1.0
+@export var base_value = 1.0
+@export var multiplier_value = 1.0
+@export var total_value = 1.0
+
+@export var level = 0
+
+@export var upgrade_bv_growth = 1
+@export var upgrade_multiplier_growth = 1
+@export var level_growth = 1
 
 func update_bv(value):
 	base_value = base_value + value
@@ -19,3 +25,14 @@ func _ready():
 	
 func updateTotalValue():
 	total_value = base_value * multiplier_value
+
+func upgrade_bv():
+	level += 1
+	update_bv(upgrade_bv_growth)
+
+func upgrade_multiplier():
+	level += 1
+	update_multiplier(upgrade_multiplier_growth)
+
+func get_price():
+	return pow(level, 2) * level_growth

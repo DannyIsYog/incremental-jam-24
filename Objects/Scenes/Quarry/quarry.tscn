@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://c2juilqsgan7t"]
+[gd_scene load_steps=9 format=3 uid="uid://c2juilqsgan7t"]
 
 [ext_resource type="Script" path="res://Objects/Scripts/Quarry/quarry.gd" id="1_tth72"]
 [ext_resource type="PackedScene" uid="uid://ddgkfxl1ljcbr" path="res://Objects/Scenes/Quarry/stone.tscn" id="2_0c3e7"]
 [ext_resource type="Texture2D" uid="uid://dfltmsblbvs7q" path="res://icon.svg" id="2_6ypvl"]
 [ext_resource type="PackedScene" uid="uid://ciymabsx72kes" path="res://Objects/Scenes/Miner.tscn" id="4_1rkk4"]
+[ext_resource type="Resource" uid="uid://dw8rn6uy8t7u0" path="res://Upgrades/mine_speed.tres" id="5_heh6f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aoyxi"]
 size = Vector2(127, 127)
@@ -37,6 +38,7 @@ shape = SubResource("RectangleShape2D_60hn2")
 [node name="Miner" parent="." instance=ExtResource("4_1rkk4")]
 position = Vector2(-69, 44)
 scale = Vector2(-1, 1)
+mine_speed = ExtResource("5_heh6f")
 
 [node name="Ground" type="StaticBody2D" parent="."]
 collision_layer = 2
