@@ -1,10 +1,32 @@
-[gd_scene load_steps=3 format=3 uid="uid://bs6rwfakxhiga"]
+[gd_scene load_steps=5 format=3 uid="uid://bs6rwfakxhiga"]
 
 [ext_resource type="Script" path="res://Objects/Scripts/floor.gd" id="1_hlfsc"]
 [ext_resource type="Texture2D" uid="uid://1w3fag6thltr" path="res://Assets/Towers_floor_1.png" id="2_0keah"]
+[ext_resource type="Texture2D" uid="uid://borcaqv2g74yb" path="res://Assets/stair_back.png" id="2_k50tw"]
+[ext_resource type="Texture2D" uid="uid://c8climgivf87x" path="res://Assets/stair_front.png" id="4_46jlb"]
 
 [node name="Floor" type="Node2D"]
 script = ExtResource("1_hlfsc")
 
+[node name="StairBack" type="Sprite2D" parent="."]
+z_index = -25
+position = Vector2(-24, 0)
+texture = ExtResource("2_k50tw")
+
 [node name="FloorSprite" type="Sprite2D" parent="."]
+z_index = 300
 texture = ExtResource("2_0keah")
+
+[node name="StairFront" type="Sprite2D" parent="."]
+z_index = 250
+position = Vector2(-27, 0)
+texture = ExtResource("4_46jlb")
+
+[node name="FirstWaypoint" type="Node2D" parent="."]
+position = Vector2(40, 8)
+
+[node name="SecondWaypoint" type="Node2D" parent="."]
+position = Vector2(-13, 8)
+
+[node name="ThirdWaypoint" type="Node2D" parent="."]
+position = Vector2(-34, -14)

@@ -1,9 +1,9 @@
 extends CharacterBody2D
 class_name  Quarry
 
-#Size of the pile
-@export var pile_size:= 0
 @onready var pile = $Pile
+@onready var grab_stone_point = $GrabStonePoint
+var stone_pile = []
 
 #Bool for mouse hovering the quarry
 var mouse_in = false
@@ -29,7 +29,7 @@ func mine_stone(amount, spawnPosition):
 		var new_stone = stone_scene.instantiate() as Stone
 		#Add to Pile
 		pile.call_deferred("add_child", new_stone)
-		pile_size += 1
+		stone_pile.append(new_stone)
 		#Randomize Height
 		new_stone.position = Vector2(spawnPosition.x, spawnPosition.y)
 		#Set Erosion Value

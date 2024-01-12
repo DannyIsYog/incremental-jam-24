@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bs6rwfakxhiga" path="res://Objects/Scenes/Tower/Floor.tscn" id="2_gwkr1"]
 [ext_resource type="FontFile" uid="uid://m8rfsrvpd8bu" path="res://Assets/EaseOfUse.ttf" id="3_iuqul"]
 
-[node name="Tower" type="Node2D"]
+[node name="Tower" type="Node2D" groups=["Tower"]]
 script = ExtResource("1_1syys")
 floors_scene = ExtResource("2_gwkr1")
 
@@ -17,3 +17,6 @@ theme_override_fonts/normal_font = ExtResource("3_iuqul")
 theme_override_font_sizes/normal_font_size = 8
 bbcode_enabled = true
 text = "0"
+
+[node name="StartingWaypoint" type="Node2D" parent="."]
+position = Vector2(40, -13)
