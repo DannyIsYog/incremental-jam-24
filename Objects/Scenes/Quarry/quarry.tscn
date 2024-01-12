@@ -33,7 +33,8 @@ texture = ExtResource("2_6ypvl")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_60hn2")
 
-[node name="Pile" type="Node" parent="."]
+[node name="Pile" type="Node2D" parent="."]
+position = Vector2(-61, 44)
 
 [node name="Miner" parent="." instance=ExtResource("4_1rkk4")]
 position = Vector2(-69, 44)

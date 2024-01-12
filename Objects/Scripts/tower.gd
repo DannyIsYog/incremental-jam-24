@@ -7,9 +7,11 @@ class_name Tower
 @onready var text = $towerText
 @onready var game_manager : GameManager = get_parent()
 @export var floors_scene : PackedScene
+@onready var starting_waypoint = $StartingWaypoint
 
 var stone_needed_per_floor : float = 100.0
 var floors_instances = []
+var flip = false
 
 @export var silver_coins_earn_rate : Value
 @export var divine_coins_earn_rate : Value
@@ -25,6 +27,7 @@ func _process(delta):
 func add_stone(stone_to_add : float) -> void:
 	current_floor_completion += stone_to_add
 	game_manager.silver_coins += stone_to_add * silver_coins_earn_rate.total_value
+	print("added stone: ", stone_to_add)
 	check_floor_completion()
 		
 func check_floor_completion() -> void:
@@ -37,6 +40,11 @@ func add_floor(floor : int) -> void:
 	var temp_floor = floors_scene.instantiate() as Floor
 	floors_instances.append(temp_floor)
 	temp_floor.position = Vector2(0, 0 - (temp_floor.get_floor_height()-4) * floors_instances.size())
+	if (flip):
+		temp_floor.scale.x *= -1
+		flip = false
+	else:
+		flip = true
 	floors.call_deferred("add_child", temp_floor)
 
 func remove_floor() -> void:

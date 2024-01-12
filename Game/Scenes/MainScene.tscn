@@ -31,7 +31,7 @@ tower = NodePath("../Tower")
 protection = ExtResource("6_1xciy")
 
 [node name="Tower" parent="." instance=ExtResource("3_7plts")]
-position = Vector2(50, 135)
+position = Vector2(50, 133)
 silver_coins_earn_rate = ExtResource("8_4ibef")
 divine_coins_earn_rate = ExtResource("9_p0mwy")
 
@@ -57,7 +57,7 @@ position = Vector2(240, -135)
 texture = ExtResource("8_o74i2")
 
 [node name="Transporter" parent="." instance=ExtResource("9_lfpmi")]
-position = Vector2(108, 121)
+position = Vector2(127, 121)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(120, 68)

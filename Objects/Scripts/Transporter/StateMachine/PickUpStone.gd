@@ -11,4 +11,5 @@ func update(_delta: float):
 		Transitioned.emit(self, "DeliverStone")
 	
 func pick_up_stone():
-	animation.animation = 'PickUp'
+	animation.play("Pick_Up")
+	
