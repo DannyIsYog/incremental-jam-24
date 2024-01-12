@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://isxf8l7s834a"]
+[gd_scene load_steps=17 format=3 uid="uid://isxf8l7s834a"]
 
 [ext_resource type="PackedScene" uid="uid://c2juilqsgan7t" path="res://Objects/Scenes/Quarry/quarry.tscn" id="1_1etx6"]
 [ext_resource type="Script" path="res://Game/Scripts/game_manager.gd" id="1_46ufe"]
@@ -16,56 +16,54 @@
 [ext_resource type="PackedScene" uid="uid://dd5ufnsu5cdyy" path="res://Objects/Scenes/Transporter.tscn" id="9_lfpmi"]
 [ext_resource type="Resource" uid="uid://dufgvosrr7q38" path="res://Upgrades/divine_coins_earn_rate.tres" id="9_p0mwy"]
 [ext_resource type="Script" path="res://Game/Scripts/camera.gd" id="9_uwiqw"]
-[ext_resource type="PackedScene" uid="uid://blbhxo63o86s6" path="res://Game/Scenes/UpgradeUI.tscn" id="12_wllv3"]
 
-[node name="GameManager" type="Node2D"]
+[node name="Game" type="Node2D"]
+
+[node name="GameManager" type="Node2D" parent="."]
+scale = Vector2(2, 2)
 script = ExtResource("1_46ufe")
 
-[node name="Quarry" parent="." groups=["Quarry"] instance=ExtResource("1_1etx6")]
+[node name="Quarry" parent="GameManager" groups=["Quarry"] instance=ExtResource("1_1etx6")]
 position = Vector2(205, 77)
 click_value = ExtResource("3_wb5le")
 erosion_value = ExtResource("4_otnub")
 
-[node name="LightningManager" parent="." node_paths=PackedStringArray("tower") instance=ExtResource("2_j3ykr")]
+[node name="LightningManager" parent="GameManager" node_paths=PackedStringArray("tower") instance=ExtResource("2_j3ykr")]
 tower = NodePath("../Tower")
 protection = ExtResource("6_1xciy")
 
-[node name="Tower" parent="." instance=ExtResource("3_7plts")]
+[node name="Tower" parent="GameManager" instance=ExtResource("3_7plts")]
 position = Vector2(50, 133)
 silver_coins_earn_rate = ExtResource("8_4ibef")
 divine_coins_earn_rate = ExtResource("9_p0mwy")
 
-[node name="Background" type="Node2D" parent="."]
+[node name="Background" type="Node2D" parent="GameManager"]
 
-[node name="SeamlessGround" type="Sprite2D" parent="Background"]
+[node name="SeamlessGround" type="Sprite2D" parent="GameManager/Background"]
 z_index = -100
 position = Vector2(480, -135)
 texture = ExtResource("5_3kn4n")
 
-[node name="Skies2" type="Sprite2D" parent="Background"]
+[node name="Skies2" type="Sprite2D" parent="GameManager/Background"]
 z_index = -150
 position = Vector2(240, -136)
 texture = ExtResource("6_3iq05")
 
-[node name="Structures" type="Sprite2D" parent="."]
+[node name="Structures" type="Sprite2D" parent="GameManager"]
 position = Vector2(240, -134)
 texture = ExtResource("7_0jp3h")
 
-[node name="GroundWithStructures" type="Sprite2D" parent="."]
+[node name="GroundWithStructures" type="Sprite2D" parent="GameManager"]
 z_index = -90
 position = Vector2(240, -135)
 texture = ExtResource("8_o74i2")
 
-[node name="Transporter" parent="." instance=ExtResource("9_lfpmi")]
+[node name="Transporter" parent="GameManager" instance=ExtResource("9_lfpmi")]
 position = Vector2(127, 121)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(120, 68)
+position = Vector2(240, 135)
 script = ExtResource("9_uwiqw")
 
 [node name="Ui" parent="Camera2D" instance=ExtResource("4_87ur8")]
-position = Vector2(-120, -68)
-
-[node name="UpgradeUI" parent="." instance=ExtResource("12_wllv3")]
-position = Vector2(77, 53)
-upgrade = ExtResource("3_wb5le")
+position = Vector2(-240, -135)
