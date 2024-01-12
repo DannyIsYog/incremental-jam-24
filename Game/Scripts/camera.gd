@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var tower : Tower = $"../Tower"
+@onready var tower : Tower = $"../Game/Tower"
 @onready var original_position = position
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

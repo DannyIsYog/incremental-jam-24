@@ -5,30 +5,85 @@
 [ext_resource type="FontFile" uid="uid://m8rfsrvpd8bu" path="res://Assets/EaseOfUse.ttf" id="2_3tan2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ye3f7"]
-size = Vector2(187, 32)
+size = Vector2(113, 32)
 
-[node name="UpgradeUI" type="Node2D"]
+[node name="UpgradeUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
 script = ExtResource("1_taib5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-58, 0)
+position = Vector2(16, 16)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_b7nss")
 
-[node name="towerText" type="RichTextLabel" parent="."]
-offset_left = -35.0
-offset_top = -15.0
-offset_right = 108.0
-offset_bottom = 16.0
+[node name="upgrade_name" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 38.0
+offset_right = 88.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_fonts/normal_font = ExtResource("2_3tan2")
 theme_override_font_sizes/normal_font_size = 8
 bbcode_enabled = true
-text = "Mine: +1 Click Value"
+text = "Cursed Apple"
+scroll_active = false
+
+[node name="next_upgrade_cost" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 78.0
+offset_right = 113.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/normal_font = ExtResource("2_3tan2")
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "[right]12 O"
+scroll_active = false
+
+[node name="upgrade_level" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 78.0
+offset_top = 16.0
+offset_right = 113.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/normal_font = ExtResource("2_3tan2")
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "[right]x10"
+scroll_active = false
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(61, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(19.5, 0)
+position = Vector2(-4.5, 0)
 shape = SubResource("RectangleShape2D_ye3f7")
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_mouse_entered"]

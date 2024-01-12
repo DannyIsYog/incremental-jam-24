@@ -1,12 +1,41 @@
-[gd_scene load_steps=2 format=3 uid="uid://bvr6sgkg5c7vx"]
+[gd_scene load_steps=4 format=3 uid="uid://bvr6sgkg5c7vx"]
 
-[ext_resource type="Texture2D" uid="uid://dfltmsblbvs7q" path="res://icon.svg" id="1_0mgcj"]
+[ext_resource type="Texture2D" uid="uid://c8d2ylave0rqx" path="res://Assets/UI/Upgrade_collum.png" id="1_gbxc8"]
+[ext_resource type="PackedScene" uid="uid://blbhxo63o86s6" path="res://Game/Scenes/UpgradeUI.tscn" id="2_3b2jv"]
+[ext_resource type="Resource" uid="uid://2pnxbfoafbgr" path="res://Upgrades/click_value.tres" id="3_8m3ps"]
 
-[node name="Ui" type="Node2D"]
-z_index = 100
+[node name="Node2D" type="Node2D"]
 
-[node name="Icon" type="Sprite2D" parent="."]
-modulate = Color(0, 0, 1, 1)
-position = Vector2(203, 67.5)
-scale = Vector2(0.563, 1.05469)
-texture = ExtResource("1_0mgcj")
+[node name="UpgradeCollum" type="Sprite2D" parent="."]
+position = Vector2(240, 136)
+texture = ExtResource("1_gbxc8")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 363.0
+offset_top = 1.0
+offset_right = 480.0
+offset_bottom = 271.0
+grow_horizontal = 0
+mouse_filter = 2
+
+[node name="GridContainer" type="GridContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -113.0
+offset_top = 35.0
+offset_bottom = 270.0
+grow_horizontal = 0
+mouse_filter = 2
+theme_override_constants/v_separation = 32
+
+[node name="UpgradeUI" parent="Control/GridContainer" instance=ExtResource("2_3b2jv")]
+layout_mode = 2
+upgrade = ExtResource("3_8m3ps")
+upgrade_name = "Click Value"
+type = 0
