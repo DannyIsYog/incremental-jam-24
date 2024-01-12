@@ -1,12 +1,14 @@
-[gd_scene load_steps=27 format=3 uid="uid://dd5ufnsu5cdyy"]
+[gd_scene load_steps=33 format=3 uid="uid://dd5ufnsu5cdyy"]
 
 [ext_resource type="Script" path="res://Objects/Scenes/Transporter.gd" id="1_pvtlh"]
 [ext_resource type="Texture2D" uid="uid://bnwvafghwlv86" path="res://Assets/Sprite_sheet_02.png" id="1_vb34c"]
 [ext_resource type="Resource" uid="uid://bxry37ogcb3nd" path="res://Upgrades/transport_speed.tres" id="2_kd1kk"]
 [ext_resource type="Script" path="res://Objects/Scripts/Transporter/StateMachine/StateMachine.gd" id="2_nwyt7"]
+[ext_resource type="Resource" uid="uid://cs3ttvobr7kr2" path="res://Upgrades/transport_quantity.tres" id="3_kwnor"]
 [ext_resource type="Script" path="res://Objects/Scripts/Transporter/StateMachine/GetStone.gd" id="3_o3ubf"]
 [ext_resource type="Script" path="res://Objects/Scripts/Transporter/StateMachine/PickUpStone.gd" id="4_wgq5y"]
 [ext_resource type="Script" path="res://Objects/Scripts/Transporter/StateMachine/DeliverStone.gd" id="5_1qbh2"]
+[ext_resource type="Texture2D" uid="uid://bxqtllalv6j8b" path="res://Assets/Sprite_sheet_04.png" id="5_7fki6"]
 [ext_resource type="Script" path="res://Objects/Scripts/Transporter/StateMachine/PlaceStone.gd" id="7_ukimv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y0fnv"]
@@ -43,6 +45,22 @@ region = Rect2(16, 16, 8, 8)
 [sub_resource type="AtlasTexture" id="AtlasTexture_bfrmv"]
 atlas = ExtResource("1_vb34c")
 region = Rect2(24, 16, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nuh0h"]
+atlas = ExtResource("5_7fki6")
+region = Rect2(0, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ixxm"]
+atlas = ExtResource("5_7fki6")
+region = Rect2(8, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0d5r"]
+atlas = ExtResource("5_7fki6")
+region = Rect2(16, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qs2wd"]
+atlas = ExtResource("5_7fki6")
+region = Rect2(24, 8, 8, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sukyh"]
 atlas = ExtResource("1_vb34c")
@@ -109,6 +127,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_nuh0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ixxm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0d5r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qs2wd")
+}],
+"loop": true,
+"name": &"Walk_Empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_sukyh")
 }, {
 "duration": 1.0,
@@ -147,6 +182,7 @@ collision_layer = 4
 collision_mask = 4
 script = ExtResource("1_pvtlh")
 transporter_speed = ExtResource("2_kd1kk")
+transport_quantity = ExtResource("3_kwnor")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_y0fnv")

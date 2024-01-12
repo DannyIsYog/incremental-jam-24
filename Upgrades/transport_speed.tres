@@ -4,9 +4,9 @@
 
 [resource]
 script = ExtResource("1_ni3qk")
-base_value = 10.0
+base_value = 50.0
 multiplier_value = 1.0
-total_value = 10.0
+total_value = 50.0
 level = 0
 upgrade_bv_growth = 1
 upgrade_multiplier_growth = 1

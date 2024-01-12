@@ -33,8 +33,7 @@ texture = ExtResource("2_6ypvl")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_60hn2")
 
-[node name="Pile" type="Node2D" parent="."]
-position = Vector2(-61, 44)
+[node name="Pile" type="Node" parent="."]
 
 [node name="Miner" parent="." instance=ExtResource("4_1rkk4")]
 position = Vector2(-69, 44)
@@ -48,6 +47,9 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
 position = Vector2(8.5, 58)
 shape = SubResource("RectangleShape2D_ylesq")
+
+[node name="GrabStonePoint" type="Node2D" parent="."]
+position = Vector2(-63, 44)
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_mouse_exited"]

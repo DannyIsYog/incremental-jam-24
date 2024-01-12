@@ -8,9 +8,14 @@ var target_waypoint = 0
 var arrived = Mutex.new()
 
 @onready var transporter = $"../.."
+@onready var animation = $"../../AnimatedSprite2D"
 
 func enter():
 	transporter.moving = true
+	if transporter.stone_transported == transporter.transport_quantity.total_value:
+		animation.play("Walk_Heavy")
+	else:
+		animation.play("Walk_Stand")
 	print("DELIVER STONE")
 	tower = get_tree().get_first_node_in_group("Tower")
 	if tower.floors_instances.size() > 0:
@@ -51,7 +56,7 @@ func update(_delta: float):
 		arrived.unlock()
 		
 	transporter.velocity = direction.normalized() * transporter.transporter_speed.total_value
-
+	
 
 func calc_destination(floor, waypoint):
 	destination = tower.floors_instances[floor].waypoints[waypoint]

@@ -29,6 +29,7 @@ func add_stone(stone_to_add : float) -> void:
 	game_manager.silver_coins += stone_to_add * silver_coins_earn_rate.total_value
 	print("added stone: ", stone_to_add)
 	check_floor_completion()
+	update_text()
 		
 func check_floor_completion() -> void:
 	if current_floor_completion >= stone_needed_per_floor:
