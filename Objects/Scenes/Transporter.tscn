@@ -225,8 +225,7 @@ shape = SubResource("RectangleShape2D_y0fnv")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_uo0r8")
-animation = &"Walk_Empty"
-frame_progress = 0.921104
+animation = &"Pick_Up"
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("2_nwyt7")
@@ -246,3 +245,5 @@ script = ExtResource("7_ukimv")
 
 [node name="Wait" type="Node" parent="StateMachine"]
 script = ExtResource("11_0dn0u")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="StateMachine/PickUpStone" method="_on_animated_sprite_2d_animation_finished"]
