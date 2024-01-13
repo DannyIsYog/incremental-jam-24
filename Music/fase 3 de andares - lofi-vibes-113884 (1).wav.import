@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://k6sx1ly8sov4"
+path="res://.godot/imported/fase 3 de andares - lofi-vibes-113884 (1).wav-539675d24e6d175c25de9d359b89c2d6.sample"
+
+[deps]
+
+source_file="res://Music/fase 3 de andares - lofi-vibes-113884 (1).wav"
+dest_files=["res://.godot/imported/fase 3 de andares - lofi-vibes-113884 (1).wav-539675d24e6d175c25de9d359b89c2d6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
