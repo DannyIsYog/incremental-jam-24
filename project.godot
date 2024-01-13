@@ -17,14 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Fase1="*res://Music/Fase1.tscn"
-Fase2="*res://Music/Fase2.tscn"
-Fase3="*res://Music/Fase3.tscn"
-Fase4="*res://Music/Fase4.tscn"
-Fase5="*res://Music/Fase5.tscn"
-Fase6="*res://Music/Fase6.tscn"
-Fase7="*res://Music/Fase7.tscn"
-Fase8="*res://Music/Fase8.tscn"
+MusicManager="*res://Music/MusicManager.tscn"
 
 [display]
 

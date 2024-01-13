@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://drtjrudn865kf"]
-
-[ext_resource type="AudioStream" uid="uid://cijb86f0kqegf" path="res://Music/fase 1 de andares - Dreams Become Real.wav" id="1_4kdg0"]
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
-stream = ExtResource("1_4kdg0")
-volume_db = -15.0
-autoplay = true

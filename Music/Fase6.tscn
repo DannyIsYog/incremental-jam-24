@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://immln1ajbvhk"]
-
-[ext_resource type="AudioStream" uid="uid://ck76h3u7eb3vw" path="res://Music/fase 6 de andares - _Pathfinder_ [Epic Adventure Orchestral CC-BY] - Scott Buckley.wav" id="1_vjj1k"]
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
-stream = ExtResource("1_vjj1k")
-volume_db = -15.0
-autoplay = true

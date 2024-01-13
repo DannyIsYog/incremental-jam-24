@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://coygfc41erp2r"]
-
-[ext_resource type="AudioStream" uid="uid://chhen1tbx0xrc" path="res://Music/fase 2 de andares - Ascending the Vale - Kevin MacLeod.wav" id="1_7xv6b"]
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
-stream = ExtResource("1_7xv6b")
-volume_db = -15.0
-autoplay = true

@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cp1hqxql3ot08"]
-
-[ext_resource type="AudioStream" uid="uid://1uya8dofxi3h" path="res://Music/fase 4 de andares - contemporary-epic-trailer-119870.wav" id="1_61j35"]
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
-stream = ExtResource("1_61j35")
-volume_db = -15.0
-autoplay = true

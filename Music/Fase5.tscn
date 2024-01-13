@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://1sbf264d7jnt"]
-
-[ext_resource type="AudioStream" uid="uid://c2ngtnuwqkoee" path="res://Music/fase 5 de andares - Scott Buckley - _Ascension_ [Emotional Hybrid Orchestral CC-BY].wav" id="1_bpeu7"]
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
-stream = ExtResource("1_bpeu7")
-volume_db = -15.0
-autoplay = true
