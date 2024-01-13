@@ -33,7 +33,6 @@ func update(_delta: float):
 	
 	if direction.length() <= 1 && arrived.try_lock():
 		arrived.lock()
-		print("target_waypoint:", target_waypoint)
 		if target_floor == tower.floors_instances.size():
 			Transitioned.emit(self, "PlaceStone")
 			
@@ -60,6 +59,5 @@ func update(_delta: float):
 
 func calc_destination(floor, waypoint):
 	destination = tower.floors_instances[floor].waypoints[waypoint]
-	print("destination: ", destination.global_position)
 	
 	

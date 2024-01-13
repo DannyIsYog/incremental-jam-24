@@ -1,7 +1,8 @@
 extends Node2D
+class_name Miner
 
 @onready var animation = $AnimatedSprite2D
-@onready var quarry = $".."
+@onready var quarry = $"../.."
 @onready var timer = $Timer
 @onready var main_scene = $"."
 

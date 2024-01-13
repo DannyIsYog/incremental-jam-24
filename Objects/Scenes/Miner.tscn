@@ -55,5 +55,6 @@ sprite_frames = SubResource("SpriteFrames_4gbch")
 animation = &"Mine"
 autoplay = "Mine"
 frame_progress = 0.858988
+flip_h = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

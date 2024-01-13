@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bhdsuqss44tay"]
+
+[ext_resource type="Script" path="res://Upgrades/SpecialUpgrades/transporter_value.gd" id="1_v6xl1"]
+
+[resource]
+script = ExtResource("1_v6xl1")
+base_value = 2.08165e-12
+multiplier_value = 1.0
+total_value = 2.08165e-12
+level = 1.0
+start_price = 20.0
+upgrade_bv_growth = 1.0
+upgrade_multiplier_growth = 1.0
+level_growth = 1.0

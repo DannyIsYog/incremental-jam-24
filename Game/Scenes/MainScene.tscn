@@ -1,17 +1,15 @@
-[gd_scene load_steps=18 format=3 uid="uid://isxf8l7s834a"]
+[gd_scene load_steps=16 format=3 uid="uid://isxf8l7s834a"]
 
 [ext_resource type="PackedScene" uid="uid://c2juilqsgan7t" path="res://Objects/Scenes/Quarry/quarry.tscn" id="1_1etx6"]
 [ext_resource type="Script" path="res://Game/Scripts/game_manager.gd" id="1_46ufe"]
 [ext_resource type="PackedScene" uid="uid://ciutgyxd7mf0m" path="res://Game/Scenes/LightningManager.tscn" id="2_j3ykr"]
 [ext_resource type="PackedScene" uid="uid://dw8dmn7yw0cgi" path="res://Objects/Scenes/Tower/Tower.tscn" id="3_7plts"]
-[ext_resource type="Resource" uid="uid://2pnxbfoafbgr" path="res://Upgrades/click_value.tres" id="3_wb5le"]
 [ext_resource type="PackedScene" uid="uid://bvr6sgkg5c7vx" path="res://Game/Scenes/UI.tscn" id="4_87ur8"]
-[ext_resource type="Resource" uid="uid://dashok0ksjr1p" path="res://Upgrades/erosion_value.tres" id="4_otnub"]
 [ext_resource type="Texture2D" uid="uid://dyajlqd551gva" path="res://Assets/Background/seamless_ground.png" id="5_3kn4n"]
 [ext_resource type="Resource" uid="uid://dxcsepnec51ir" path="res://Upgrades/protection.tres" id="6_1xciy"]
 [ext_resource type="Texture2D" uid="uid://bqy7r40s3k53f" path="res://Assets/Background/skies2.png" id="6_3iq05"]
 [ext_resource type="Texture2D" uid="uid://dyxc0kgp4qxnm" path="res://Assets/Background/structures.png" id="7_0jp3h"]
-[ext_resource type="PackedScene" path="res://Objects/Scenes/lightning.tscn" id="7_212xd"]
+[ext_resource type="PackedScene" uid="uid://b3brxnoljsckr" path="res://Objects/Scenes/lightning.tscn" id="7_212xd"]
 [ext_resource type="Resource" uid="uid://fh5k7hx5loai" path="res://Upgrades/silver_coins_earn_rate.tres" id="8_4ibef"]
 [ext_resource type="Texture2D" uid="uid://diff15wuf6dwf" path="res://Assets/Background/ground_with_structures.png" id="8_o74i2"]
 [ext_resource type="PackedScene" uid="uid://dd5ufnsu5cdyy" path="res://Objects/Scenes/Transporter.tscn" id="9_lfpmi"]
@@ -26,8 +24,7 @@ script = ExtResource("1_46ufe")
 
 [node name="Quarry" parent="GameManager" groups=["Quarry"] instance=ExtResource("1_1etx6")]
 position = Vector2(205, 77)
-click_value = ExtResource("3_wb5le")
-erosion_value = ExtResource("4_otnub")
+transporter_scene = ExtResource("9_lfpmi")
 
 [node name="LightningManager" parent="GameManager" node_paths=PackedStringArray("tower") instance=ExtResource("2_j3ykr")]
 tower = NodePath("../Tower")

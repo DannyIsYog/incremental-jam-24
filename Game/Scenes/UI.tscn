@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bvr6sgkg5c7vx"]
+[gd_scene load_steps=23 format=3 uid="uid://bvr6sgkg5c7vx"]
 
 [ext_resource type="Texture2D" uid="uid://cuayjs53jwbmj" path="res://Assets/UI/Coin_wallet.png" id="1_aj4vh"]
 [ext_resource type="Texture2D" uid="uid://c8d2ylave0rqx" path="res://Assets/UI/Upgrade_collum.png" id="1_gbxc8"]
@@ -19,6 +19,9 @@
 [ext_resource type="Texture2D" uid="uid://dgvxkawd6rge8" path="res://Assets/UI/Icons/John_icon.png" id="17_q6bf5"]
 [ext_resource type="Resource" uid="uid://dxcsepnec51ir" path="res://Upgrades/protection.tres" id="18_73rvd"]
 [ext_resource type="Texture2D" uid="uid://dhk7016ljxenn" path="res://Assets/UI/Icons/temple_icon.png" id="19_82w00"]
+[ext_resource type="Resource" uid="uid://csb1x03ccg53u" path="res://Upgrades/miner.tres" id="20_qd1cb"]
+[ext_resource type="Texture2D" uid="uid://colcfqk2ms1qa" path="res://Assets/UI/Icons/Miners.png" id="21_mxgyj"]
+[ext_resource type="Resource" uid="uid://bhdsuqss44tay" path="res://Upgrades/transporter.tres" id="22_0g64x"]
 
 [node name="UI" type="Node2D"]
 script = ExtResource("1_pdijd")
@@ -179,3 +182,22 @@ upgrade_name = "Temple"
 tool_tip = "Increases the protection against lightning stikes"
 upgrade_type = 0
 currency_type = 1
+
+[node name="Miner" parent="ScrollContainer/GridContainer" instance=ExtResource("2_3b2jv")]
+layout_mode = 2
+upgrade = ExtResource("20_qd1cb")
+icon = ExtResource("21_mxgyj")
+upgrade_name = "Miner"
+tool_tip = "Increases the protection against lightning stikes"
+upgrade_type = 0
+currency_type = 0
+unique = true
+
+[node name="Transporter" parent="ScrollContainer/GridContainer" instance=ExtResource("2_3b2jv")]
+layout_mode = 2
+upgrade = ExtResource("22_0g64x")
+icon = ExtResource("21_mxgyj")
+upgrade_name = "Transporter"
+tool_tip = "Increases the protection against lightning stikes"
+upgrade_type = 0
+currency_type = 0

@@ -5,6 +5,7 @@ class_name Wait
 @onready var animation = $"../../AnimatedSprite2D"
 
 func enter():
+	print("SITTING DOWN")
 	transporter.moving = false
 	transporter.scale.x = -1
 	animation.play("Idle")

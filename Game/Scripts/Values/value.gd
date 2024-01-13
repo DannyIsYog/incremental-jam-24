@@ -1,12 +1,11 @@
 extends Resource
-
 class_name Value
 
 @export var base_value = 1.0
 @export var multiplier_value = 1.0
 @export var total_value = 1.0
 
-@export var level = 0.0
+@export var level = 1.0
 
 @export var start_price = 1.0
 @export var upgrade_bv_growth = 1.0
@@ -36,4 +35,4 @@ func upgrade_multiplier():
 	update_multiplier(upgrade_multiplier_growth)
 
 func get_price():
-	return start_price + pow(level, 2) * level_growth
+	return (start_price * (level * level_growth)) + pow(level, 2.0)
