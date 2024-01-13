@@ -15,11 +15,12 @@ func _ready():
 	quarry = get_tree().get_first_node_in_group("Quarry")
 	
 func _physics_process(delta):
-	if moving:
-		move_and_slide()
-	
 	if velocity.x > 0:
 		animated_sprite_2d.flip_h = true
 	elif velocity.x < 0:
 		animated_sprite_2d.flip_h = false
+		
+	if moving:
+		move_and_slide()
+	
 		

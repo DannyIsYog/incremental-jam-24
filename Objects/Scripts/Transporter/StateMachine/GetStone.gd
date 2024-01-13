@@ -20,7 +20,7 @@ func exit():
 func physics_update(delta):
 	var direction = destination.global_position - transporter.global_position
 	
-	if transporter.global_position.x >= 90:
+	if transporter.global_position.x >= 190:
 		gravity = ProjectSettings.get_setting("physics/2d/default_gravity") * 5
 		transporter.velocity = direction.normalized() * transporter.transporter_speed.total_value
 	else: 
@@ -28,7 +28,7 @@ func physics_update(delta):
 		transporter.velocity.x = transporter.transporter_speed.total_value
 		transporter.velocity.y = gravity
 	
-	if transporter.global_position.y < 120:
+	if transporter.global_position.y < 240:
 		transporter.velocity.y += gravity * delta
 	
 	if direction.length() < 1:

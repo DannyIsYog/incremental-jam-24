@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://isxf8l7s834a"]
+[gd_scene load_steps=18 format=3 uid="uid://isxf8l7s834a"]
 
 [ext_resource type="PackedScene" uid="uid://c2juilqsgan7t" path="res://Objects/Scenes/Quarry/quarry.tscn" id="1_1etx6"]
 [ext_resource type="Script" path="res://Game/Scripts/game_manager.gd" id="1_46ufe"]
@@ -11,6 +11,7 @@
 [ext_resource type="Resource" uid="uid://dxcsepnec51ir" path="res://Upgrades/protection.tres" id="6_1xciy"]
 [ext_resource type="Texture2D" uid="uid://bqy7r40s3k53f" path="res://Assets/Background/skies2.png" id="6_3iq05"]
 [ext_resource type="Texture2D" uid="uid://dyxc0kgp4qxnm" path="res://Assets/Background/structures.png" id="7_0jp3h"]
+[ext_resource type="PackedScene" uid="uid://b3brxnoljsckr" path="res://Objects/Scenes/lightning.tscn" id="7_212xd"]
 [ext_resource type="Resource" uid="uid://fh5k7hx5loai" path="res://Upgrades/silver_coins_earn_rate.tres" id="8_4ibef"]
 [ext_resource type="Texture2D" uid="uid://diff15wuf6dwf" path="res://Assets/Background/ground_with_structures.png" id="8_o74i2"]
 [ext_resource type="PackedScene" uid="uid://dd5ufnsu5cdyy" path="res://Objects/Scenes/Transporter.tscn" id="9_lfpmi"]
@@ -31,9 +32,10 @@ erosion_value = ExtResource("4_otnub")
 [node name="LightningManager" parent="GameManager" node_paths=PackedStringArray("tower") instance=ExtResource("2_j3ykr")]
 tower = NodePath("../Tower")
 protection = ExtResource("6_1xciy")
+lightning_scene = ExtResource("7_212xd")
 
 [node name="Tower" parent="GameManager" instance=ExtResource("3_7plts")]
-position = Vector2(50, 133)
+position = Vector2(50, 134)
 silver_coins_earn_rate = ExtResource("8_4ibef")
 divine_coins_earn_rate = ExtResource("9_p0mwy")
 
@@ -49,7 +51,20 @@ z_index = -150
 position = Vector2(240, -136)
 texture = ExtResource("6_3iq05")
 
+[node name="Skies3" type="Sprite2D" parent="GameManager/Background"]
+z_index = -150
+position = Vector2(719, -136.5)
+texture = ExtResource("6_3iq05")
+
+[node name="ColorRect" type="ColorRect" parent="GameManager/Background"]
+z_index = -200
+offset_top = -11157.0
+offset_right = 8866.0
+offset_bottom = -404.0
+color = Color(0, 0, 0, 1)
+
 [node name="Structures" type="Sprite2D" parent="GameManager"]
+z_index = -150
 position = Vector2(240, -134)
 texture = ExtResource("7_0jp3h")
 
@@ -58,13 +73,20 @@ z_index = -90
 position = Vector2(240, -135)
 texture = ExtResource("8_o74i2")
 
-[node name="Transporter" parent="GameManager" instance=ExtResource("9_lfpmi")]
-position = Vector2(127, 121)
-
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(240, 135)
 script = ExtResource("9_uwiqw")
 
-[node name="UI" parent="Camera" node_paths=PackedStringArray("game_manager") instance=ExtResource("4_87ur8")]
-position = Vector2(-240, -135)
-game_manager = NodePath("../../GameManager")
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera"]
+
+[node name="UI" parent="Camera/CanvasLayer" node_paths=PackedStringArray("game_manager") instance=ExtResource("4_87ur8")]
+z_index = 1000
+game_manager = NodePath("../../../GameManager")
+
+[node name="Transporters" type="Node" parent="."]
+
+[node name="Transporter" parent="Transporters" instance=ExtResource("9_lfpmi")]
+position = Vector2(-16, 242)
+
+[node name="SpawnPoint" type="Node2D" parent="Transporters"]
+position = Vector2(-16, 242)
