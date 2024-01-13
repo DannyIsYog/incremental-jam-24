@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b685g1uuvk0x3"]
+
+[ext_resource type="AudioStream" uid="uid://dg7y5hh57mgl4" path="res://Music/fase 8 - Evolution.wav" id="1_n7erm"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_n7erm")
+autoplay = true

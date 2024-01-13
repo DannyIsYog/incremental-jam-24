@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dd15etpqxmxwr"]
+
+[ext_resource type="AudioStream" uid="uid://ciln427jrrfpx" path="res://Music/fase 7 de andares - o jogador está perto do fim - Patrick Patrikios - The Awakening.wav" id="1_adgpl"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_adgpl")
+autoplay = true

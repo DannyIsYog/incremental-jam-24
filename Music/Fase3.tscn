@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhhyfnlq8ytgh"]
+
+[ext_resource type="AudioStream" uid="uid://k6sx1ly8sov4" path="res://Music/fase 3 de andares - lofi-vibes-113884 (1).wav" id="1_jniv5"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_jniv5")
+autoplay = true
