@@ -7,6 +7,7 @@ const CHECK_LIGHTNING_TIME = 1.0 #1 second
 
 @export var tower : Tower
 @export var protection : Value
+@export var lightning_scene : PackedScene
 
 var time = 0
 
@@ -21,6 +22,9 @@ func check_lightning():
 	var dice = RandomNumberGenerator.new().randf_range(0.0, 1.0)
 	
 	if dice < probability:
+		var new_lightning = lightning_scene.instantiate() as Lightning
+		tower.add_child(new_lightning)
+		new_lightning.global_position = tower.floors_instances[-1].global_position
 		tower.remove_floor()
 
 func get_lightning_base_probability():

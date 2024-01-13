@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://bs6rwfakxhiga"]
 
 [ext_resource type="Script" path="res://Objects/Scripts/floor.gd" id="1_hlfsc"]
-[ext_resource type="Texture2D" uid="uid://1w3fag6thltr" path="res://Assets/Towers_floor_1.png" id="2_0keah"]
-[ext_resource type="Texture2D" uid="uid://borcaqv2g74yb" path="res://Assets/stair_back.png" id="2_k50tw"]
-[ext_resource type="Texture2D" uid="uid://c8climgivf87x" path="res://Assets/stair_front.png" id="4_46jlb"]
+[ext_resource type="Texture2D" uid="uid://1w3fag6thltr" path="res://Assets/Tower/Towers_floor_1.png" id="2_0keah"]
+[ext_resource type="Texture2D" uid="uid://borcaqv2g74yb" path="res://Assets/Tower/stair_back.png" id="2_k50tw"]
+[ext_resource type="Texture2D" uid="uid://c8climgivf87x" path="res://Assets/Tower/stair_front.png" id="4_46jlb"]
 
 [node name="Floor" type="Node2D"]
 script = ExtResource("1_hlfsc")
@@ -29,4 +29,4 @@ position = Vector2(40, 8)
 position = Vector2(-13, 8)
 
 [node name="ThirdWaypoint" type="Node2D" parent="."]
-position = Vector2(-34, -14)
+position = Vector2(-31, -14)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxqtllalv6j8b"
-path="res://.godot/imported/Sprite_sheet_04.png-677d280757378c03a7df00571070873b.ctex"
+uid="uid://drki45y1v6p1o"
+path="res://.godot/imported/hulk_icon.png-e4e2c6a1e59ca658232823bf6ea8f215.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite_sheet_04.png"
-dest_files=["res://.godot/imported/Sprite_sheet_04.png-677d280757378c03a7df00571070873b.ctex"]
+source_file="res://Assets/UI/Icons/hulk_icon.png"
+dest_files=["res://.godot/imported/hulk_icon.png-e4e2c6a1e59ca658232823bf6ea8f215.ctex"]
 
 [params]
 

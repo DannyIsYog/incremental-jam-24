@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rovwgufoyaxr"
-path="res://.godot/imported/Sprite_sheet_01.png-0fff63b2bfb5fdd4a484f1bb96287d20.ctex"
+uid="uid://borcaqv2g74yb"
+path="res://.godot/imported/stair_back.png-c78fc52166eba13515ba049d9dae438e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite_sheet_01.png"
-dest_files=["res://.godot/imported/Sprite_sheet_01.png-0fff63b2bfb5fdd4a484f1bb96287d20.ctex"]
+source_file="res://Assets/Tower/stair_back.png"
+dest_files=["res://.godot/imported/stair_back.png-c78fc52166eba13515ba049d9dae438e.ctex"]
 
 [params]
 

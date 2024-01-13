@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnwvafghwlv86"
-path="res://.godot/imported/Sprite_sheet_02.png-a8d79f0cfd7783eeff575a8be947d424.ctex"
+uid="uid://h5jo1xlc6dx8"
+path="res://.godot/imported/Towers_floor_2.png-e737b95f7969c381d88cb9467f55850b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite_sheet_02.png"
-dest_files=["res://.godot/imported/Sprite_sheet_02.png-a8d79f0cfd7783eeff575a8be947d424.ctex"]
+source_file="res://Assets/Tower/Towers_floor_2.png"
+dest_files=["res://.godot/imported/Towers_floor_2.png-e737b95f7969c381d88cb9467f55850b.ctex"]
 
 [params]
 

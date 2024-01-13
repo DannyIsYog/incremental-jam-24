@@ -6,12 +6,15 @@ class_name PickUpStone
 
 func enter():
 	print("Pick Up Stone")
-	animation.play("Pick_Up")
+	if transporter.quarry.stone_pile.size() > 0:
+		animation.play("Pick_Up")
 	transporter.moving = false
 	
 func update(delta):
 	if transporter.quarry.stone_pile.size() <= 0:
 			print("Im out")
+			if transporter.stone_transported == 0:
+				Transitioned.emit(self, "Wait")
 			Transitioned.emit(self, "DeliverStone")
 			
 	if transporter.transport_quantity.total_value > transporter.stone_transported:

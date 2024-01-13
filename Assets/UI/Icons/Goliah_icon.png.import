@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cck6f0fk2l5kx"
-path="res://.godot/imported/Sprite_sheet_03.png-9c5dceb5a17855a0ef2b7cc7d4b57c3c.ctex"
+uid="uid://cspywe8c60pqi"
+path="res://.godot/imported/Goliah_icon.png-acb70ac76c263df75b225664c5ff39fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite_sheet_03.png"
-dest_files=["res://.godot/imported/Sprite_sheet_03.png-9c5dceb5a17855a0ef2b7cc7d4b57c3c.ctex"]
+source_file="res://Assets/UI/Icons/Goliah_icon.png"
+dest_files=["res://.godot/imported/Goliah_icon.png-acb70ac76c263df75b225664c5ff39fd.ctex"]
 
 [params]
 
