@@ -11,7 +11,7 @@
 [ext_resource type="Resource" uid="uid://dxcsepnec51ir" path="res://Upgrades/protection.tres" id="6_1xciy"]
 [ext_resource type="Texture2D" uid="uid://bqy7r40s3k53f" path="res://Assets/Background/skies2.png" id="6_3iq05"]
 [ext_resource type="Texture2D" uid="uid://dyxc0kgp4qxnm" path="res://Assets/Background/structures.png" id="7_0jp3h"]
-[ext_resource type="PackedScene" uid="uid://b3brxnoljsckr" path="res://Objects/Scenes/lightning.tscn" id="7_212xd"]
+[ext_resource type="PackedScene" path="res://Objects/Scenes/lightning.tscn" id="7_212xd"]
 [ext_resource type="Resource" uid="uid://fh5k7hx5loai" path="res://Upgrades/silver_coins_earn_rate.tres" id="8_4ibef"]
 [ext_resource type="Texture2D" uid="uid://diff15wuf6dwf" path="res://Assets/Background/ground_with_structures.png" id="8_o74i2"]
 [ext_resource type="PackedScene" uid="uid://dd5ufnsu5cdyy" path="res://Objects/Scenes/Transporter.tscn" id="9_lfpmi"]

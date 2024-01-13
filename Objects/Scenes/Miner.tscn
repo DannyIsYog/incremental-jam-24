@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://ciymabsx72kes"]
+[gd_scene load_steps=10 format=3 uid="uid://ciymabsx72kes"]
 
 [ext_resource type="Script" path="res://Objects/Scripts/Miner.gd" id="1_iolpa"]
 [ext_resource type="Texture2D" uid="uid://bnwvafghwlv86" path="res://Assets/SpriteSheets/Sprite_sheet_02.png" id="2_8prd8"]
+[ext_resource type="Resource" uid="uid://dw8rn6uy8t7u0" path="res://Upgrades/mine_speed.tres" id="2_m5km3"]
+[ext_resource type="Resource" uid="uid://deks84s7dslul" path="res://Upgrades/mine_quantity.tres" id="3_gi6ko"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l832l"]
 atlas = ExtResource("2_8prd8")
@@ -41,6 +43,8 @@ animations = [{
 
 [node name="Miner" type="Node2D"]
 script = ExtResource("1_iolpa")
+mine_speed = ExtResource("2_m5km3")
+mine_quantity = ExtResource("3_gi6ko")
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true

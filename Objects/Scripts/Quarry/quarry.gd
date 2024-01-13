@@ -35,7 +35,6 @@ func mine_stone(amount, spawnPosition):
 		#Set Erosion Value
 		new_stone.erosion_value = erosion_value.total_value
 		amount -= 1
-	pass
 
 func _mouse_entered():
 	mouse_in = true
