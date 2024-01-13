@@ -35,7 +35,7 @@ protection = ExtResource("6_1xciy")
 lightning_scene = ExtResource("7_212xd")
 
 [node name="Tower" parent="GameManager" instance=ExtResource("3_7plts")]
-position = Vector2(50, 133)
+position = Vector2(50, 134)
 silver_coins_earn_rate = ExtResource("8_4ibef")
 divine_coins_earn_rate = ExtResource("9_p0mwy")
 
@@ -73,9 +73,6 @@ z_index = -90
 position = Vector2(240, -135)
 texture = ExtResource("8_o74i2")
 
-[node name="Transporter" parent="GameManager" instance=ExtResource("9_lfpmi")]
-position = Vector2(127, 121)
-
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(240, 135)
 script = ExtResource("9_uwiqw")
@@ -85,3 +82,11 @@ script = ExtResource("9_uwiqw")
 [node name="UI" parent="Camera/CanvasLayer" node_paths=PackedStringArray("game_manager") instance=ExtResource("4_87ur8")]
 z_index = 1000
 game_manager = NodePath("../../../GameManager")
+
+[node name="Transporters" type="Node" parent="."]
+
+[node name="Transporter" parent="Transporters" instance=ExtResource("9_lfpmi")]
+position = Vector2(-16, 242)
+
+[node name="SpawnPoint" type="Node2D" parent="Transporters"]
+position = Vector2(-16, 242)
