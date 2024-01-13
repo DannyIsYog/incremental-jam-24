@@ -39,6 +39,7 @@ shape = SubResource("RectangleShape2D_60hn2")
 position = Vector2(-69, 44)
 scale = Vector2(-1, 1)
 mine_speed = ExtResource("5_heh6f")
+mine_quantity = ExtResource("6_tmcdf")
 
 [node name="Ground" type="StaticBody2D" parent="."]
 collision_layer = 2

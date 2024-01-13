@@ -21,7 +21,7 @@ func add_silver_coins(coins : int):
 	wallet_ui.update_wallet()
 
 func remove_silver_coins(coins : int):
-	silver_coins += coins
+	silver_coins -= coins
 	wallet_ui.update_wallet()
 
 func add_divine_coins(coins : int):

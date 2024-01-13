@@ -6,11 +6,12 @@ class_name Value
 @export var multiplier_value = 1.0
 @export var total_value = 1.0
 
-@export var level = 0
+@export var level = 0.0
 
-@export var upgrade_bv_growth = 1
-@export var upgrade_multiplier_growth = 1
-@export var level_growth = 1
+@export var start_price = 1.0
+@export var upgrade_bv_growth = 1.0
+@export var upgrade_multiplier_growth = 1.0
+@export var level_growth = 1.0
 
 func update_bv(value):
 	base_value = base_value + value
@@ -35,4 +36,4 @@ func upgrade_multiplier():
 	update_multiplier(upgrade_multiplier_growth)
 
 func get_price():
-	return pow(level, 2) * level_growth
+	return start_price + pow(level, 2) * level_growth
