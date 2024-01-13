@@ -20,3 +20,5 @@ fase5 = ExtResource("6_ibg87")
 fase6 = ExtResource("7_2f44q")
 fase7 = ExtResource("8_yaplf")
 fase8 = ExtResource("9_d74nt")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
