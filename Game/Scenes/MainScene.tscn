@@ -61,9 +61,10 @@ texture = ExtResource("8_o74i2")
 [node name="Transporter" parent="GameManager" instance=ExtResource("9_lfpmi")]
 position = Vector2(127, 121)
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera" type="Camera2D" parent="."]
 position = Vector2(240, 135)
 script = ExtResource("9_uwiqw")
 
-[node name="Ui" parent="Camera2D" instance=ExtResource("4_87ur8")]
+[node name="UI" parent="Camera" node_paths=PackedStringArray("game_manager") instance=ExtResource("4_87ur8")]
 position = Vector2(-240, -135)
+game_manager = NodePath("../../GameManager")

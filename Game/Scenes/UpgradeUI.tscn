@@ -1,22 +1,30 @@
-[gd_scene load_steps=5 format=3 uid="uid://blbhxo63o86s6"]
+[gd_scene load_steps=7 format=3 uid="uid://blbhxo63o86s6"]
 
-[ext_resource type="Texture2D" uid="uid://dfltmsblbvs7q" path="res://icon.svg" id="1_b7nss"]
 [ext_resource type="Script" path="res://Game/Scripts/UpgradeUI.gd" id="1_taib5"]
+[ext_resource type="Texture2D" uid="uid://bi8bbwix535eh" path="res://Assets/UI/Upgrade_box_red.png" id="2_2u6t7"]
 [ext_resource type="FontFile" uid="uid://m8rfsrvpd8bu" path="res://Assets/EaseOfUse.ttf" id="2_3tan2"]
+[ext_resource type="Texture2D" uid="uid://dsijfqpvd4hvr" path="res://Assets/UI/Icons/hand_icon.png" id="2_jclua"]
+[ext_resource type="Texture2D" uid="uid://bcnwdce63h0tf" path="res://Assets/UI/Sliver_coin.png" id="5_olrdp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ye3f7"]
-size = Vector2(113, 32)
+size = Vector2(113, 26)
 
 [node name="UpgradeUI" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 mouse_filter = 2
 script = ExtResource("1_taib5")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(16, 16)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_b7nss")
+[node name="UpgradeBoxRed" type="Sprite2D" parent="."]
+position = Vector2(56.25, 13.5)
+scale = Vector2(1.125, 1.125)
+texture = ExtResource("2_2u6t7")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(16, 13)
+texture = ExtResource("2_jclua")
 
 [node name="upgrade_name" type="RichTextLabel" parent="."]
 layout_mode = 1
@@ -25,13 +33,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 38.0
-offset_right = 88.0
-offset_bottom = 32.0
+offset_left = 27.0
+offset_top = 1.0
+offset_right = 77.0
+offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+tooltip_text = "Increase stones mined per click by one"
+mouse_filter = 1
+theme_override_colors/default_color = Color(0.282353, 0.227451, 0.168627, 1)
 theme_override_fonts/normal_font = ExtResource("2_3tan2")
 theme_override_font_sizes/normal_font_size = 8
 bbcode_enabled = true
@@ -45,17 +57,20 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 78.0
-offset_right = 113.0
-offset_bottom = 16.0
+offset_left = 66.0
+offset_top = 1.0
+offset_right = 101.0
+offset_bottom = 17.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.282353, 0.227451, 0.168627, 1)
 theme_override_fonts/normal_font = ExtResource("2_3tan2")
 theme_override_font_sizes/normal_font_size = 8
 bbcode_enabled = true
-text = "[right]12 O"
+text = "[right]12[/right]"
 scroll_active = false
 
 [node name="upgrade_level" type="RichTextLabel" parent="."]
@@ -65,14 +80,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 78.0
-offset_top = 16.0
-offset_right = 113.0
-offset_bottom = 32.0
+offset_left = 74.0
+offset_top = 12.0
+offset_right = 109.0
+offset_bottom = 28.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.282353, 0.227451, 0.168627, 1)
 theme_override_fonts/normal_font = ExtResource("2_3tan2")
 theme_override_font_sizes/normal_font_size = 8
 bbcode_enabled = true
@@ -83,8 +100,12 @@ scroll_active = false
 position = Vector2(61, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-4.5, 0)
+position = Vector2(-4.5, -3)
 shape = SubResource("RectangleShape2D_ye3f7")
+
+[node name="SliverCoin" type="Sprite2D" parent="."]
+position = Vector2(105, 9)
+texture = ExtResource("5_olrdp")
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_mouse_exited"]

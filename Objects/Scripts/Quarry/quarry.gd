@@ -17,7 +17,7 @@ var mouse_in = false
 #PLayer clicks on the quarry
 func _input(event):
 	if event is InputEventMouseButton:
-		if event.is_pressed() && mouse_in:
+		if event.is_pressed() && mouse_in && event.button_index == 1:
 			print("Click Value:", click_value.total_value)
 			mine_stone(click_value.total_value, get_global_mouse_position())
 			

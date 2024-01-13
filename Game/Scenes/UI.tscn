@@ -1,41 +1,198 @@
-[gd_scene load_steps=4 format=3 uid="uid://bvr6sgkg5c7vx"]
+[gd_scene load_steps=10 format=3 uid="uid://bvr6sgkg5c7vx"]
 
+[ext_resource type="Texture2D" uid="uid://cuayjs53jwbmj" path="res://Assets/UI/Coin_wallet.png" id="1_aj4vh"]
 [ext_resource type="Texture2D" uid="uid://c8d2ylave0rqx" path="res://Assets/UI/Upgrade_collum.png" id="1_gbxc8"]
+[ext_resource type="Script" path="res://Game/Scripts/wallet_ui.gd" id="1_pdijd"]
 [ext_resource type="PackedScene" uid="uid://blbhxo63o86s6" path="res://Game/Scenes/UpgradeUI.tscn" id="2_3b2jv"]
+[ext_resource type="FontFile" uid="uid://m8rfsrvpd8bu" path="res://Assets/EaseOfUse.ttf" id="2_oan22"]
 [ext_resource type="Resource" uid="uid://2pnxbfoafbgr" path="res://Upgrades/click_value.tres" id="3_8m3ps"]
+[ext_resource type="Texture2D" uid="uid://bcnwdce63h0tf" path="res://Assets/UI/Sliver_coin.png" id="3_dhe7h"]
+[ext_resource type="Texture2D" uid="uid://dsijfqpvd4hvr" path="res://Assets/UI/Icons/hand_icon.png" id="4_ddgs5"]
+[ext_resource type="Texture2D" uid="uid://dqxhiwx6lvuwx" path="res://Assets/UI/Divine_coin.png" id="4_lfs56"]
 
-[node name="Node2D" type="Node2D"]
+[node name="UI" type="Node2D"]
+script = ExtResource("1_pdijd")
+
+[node name="CoinWallet" type="Node2D" parent="."]
+
+[node name="CoinWalletBG" type="Sprite2D" parent="CoinWallet"]
+modulate = Color(1, 1, 1, 0.807843)
+position = Vector2(240, 11)
+texture = ExtResource("1_aj4vh")
+
+[node name="SilverCoins" type="RichTextLabel" parent="CoinWallet"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 27.0
+offset_top = 1.0
+offset_right = 67.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "Hello"
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("2_oan22")
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "1000000"
+scroll_active = false
+
+[node name="SliverCoin" type="Sprite2D" parent="CoinWallet"]
+position = Vector2(71, 9)
+texture = ExtResource("3_dhe7h")
+
+[node name="DivineCoins" type="RichTextLabel" parent="CoinWallet"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 106.0
+offset_top = 1.0
+offset_right = 146.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "Hello"
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("2_oan22")
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "1000000"
+scroll_active = false
+
+[node name="DivineCoin" type="Sprite2D" parent="CoinWallet"]
+position = Vector2(150, 9)
+texture = ExtResource("4_lfs56")
 
 [node name="UpgradeCollum" type="Sprite2D" parent="."]
-position = Vector2(240, 136)
+position = Vector2(202.5, 135)
+scale = Vector2(1.15625, 1)
 texture = ExtResource("1_gbxc8")
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = 363.0
-offset_top = 1.0
+[node name="DivineCoins2" type="RichTextLabel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 351.0
+offset_right = 473.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "Hello"
+mouse_filter = 1
+theme_override_colors/default_color = Color(0.282353, 0.227451, 0.168627, 1)
+theme_override_fonts/normal_font = ExtResource("2_oan22")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[center]Upgrades"
+scroll_active = false
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+offset_left = 357.0
+offset_top = 36.0
 offset_right = 480.0
 offset_bottom = 271.0
-grow_horizontal = 0
-mouse_filter = 2
+follow_focus = true
+horizontal_scroll_mode = 0
 
-[node name="GridContainer" type="GridContainer" parent="Control"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -113.0
-offset_top = 35.0
-offset_bottom = 270.0
-grow_horizontal = 0
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
 mouse_filter = 2
-theme_override_constants/v_separation = 32
+theme_override_constants/v_separation = 30
 
-[node name="UpgradeUI" parent="Control/GridContainer" instance=ExtResource("2_3b2jv")]
+[node name="ClickValueAdditiveUpgrade" parent="ScrollContainer/GridContainer" instance=ExtResource("2_3b2jv")]
 layout_mode = 2
 upgrade = ExtResource("3_8m3ps")
+icon = ExtResource("4_ddgs5")
+upgrade_name = "Click Value"
+type = 0
+
+[node name="ClickValueAdditiveUpgrade2" parent="ScrollContainer/GridContainer" instance=ExtResource("2_3b2jv")]
+layout_mode = 2
+upgrade = ExtResource("3_8m3ps")
+icon = ExtResource("4_ddgs5")
+upgrade_name = "Click Value"
+type = 0
+
+[node name="ClickValueAdditiveUpgrade3" parent="ScrollContainer/GridContainer" instance=ExtResource("2_3b2jv")]
+layout_mode = 2
+upgrade = ExtResource("3_8m3ps")
+icon = ExtResource("4_ddgs5")
+upgrade_name = "Click Value"
+type = 0
+
+[node name="ClickValueAdditiveUpgrade4" parent="ScrollContainer/GridContainer" instance=ExtResource("2_3b2jv")]
+layout_mode = 2
+upgrade = ExtResource("3_8m3ps")
+icon = ExtResource("4_ddgs5")
+upgrade_name = "Click Value"
+type = 0
+
+[node name="ClickValueAdditiveUpgrade5" parent="ScrollContainer/GridContainer" instance=ExtResource("2_3b2jv")]
+layout_mode = 2
+upgrade = ExtResource("3_8m3ps")
+icon = ExtResource("4_ddgs5")
+upgrade_name = "Click Value"
+type = 0
+
+[node name="ClickValueAdditiveUpgrade6" parent="ScrollContainer/GridContainer" instance=ExtResource("2_3b2jv")]
+layout_mode = 2
+upgrade = ExtResource("3_8m3ps")
+icon = ExtResource("4_ddgs5")
+upgrade_name = "Click Value"
+type = 0
+
+[node name="ClickValueAdditiveUpgrade7" parent="ScrollContainer/GridContainer" instance=ExtResource("2_3b2jv")]
+layout_mode = 2
+upgrade = ExtResource("3_8m3ps")
+icon = ExtResource("4_ddgs5")
+upgrade_name = "Click Value"
+type = 0
+
+[node name="ClickValueAdditiveUpgrade8" parent="ScrollContainer/GridContainer" instance=ExtResource("2_3b2jv")]
+layout_mode = 2
+upgrade = ExtResource("3_8m3ps")
+icon = ExtResource("4_ddgs5")
+upgrade_name = "Click Value"
+type = 0
+
+[node name="ClickValueAdditiveUpgrade9" parent="ScrollContainer/GridContainer" instance=ExtResource("2_3b2jv")]
+layout_mode = 2
+upgrade = ExtResource("3_8m3ps")
+icon = ExtResource("4_ddgs5")
+upgrade_name = "Click Value"
+type = 0
+
+[node name="ClickValueAdditiveUpgrade10" parent="ScrollContainer/GridContainer" instance=ExtResource("2_3b2jv")]
+layout_mode = 2
+upgrade = ExtResource("3_8m3ps")
+icon = ExtResource("4_ddgs5")
+upgrade_name = "Click Value"
+type = 0
+
+[node name="ClickValueAdditiveUpgrade11" parent="ScrollContainer/GridContainer" instance=ExtResource("2_3b2jv")]
+layout_mode = 2
+upgrade = ExtResource("3_8m3ps")
+icon = ExtResource("4_ddgs5")
+upgrade_name = "Click Value"
+type = 0
+
+[node name="ClickValueAdditiveUpgrade12" parent="ScrollContainer/GridContainer" instance=ExtResource("2_3b2jv")]
+layout_mode = 2
+upgrade = ExtResource("3_8m3ps")
+icon = ExtResource("4_ddgs5")
 upgrade_name = "Click Value"
 type = 0

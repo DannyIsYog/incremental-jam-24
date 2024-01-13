@@ -1,14 +1,14 @@
 [gd_scene load_steps=33 format=3 uid="uid://dd5ufnsu5cdyy"]
 
 [ext_resource type="Script" path="res://Objects/Scenes/Transporter.gd" id="1_pvtlh"]
-[ext_resource type="Texture2D" uid="uid://bnwvafghwlv86" path="res://Assets/Sprite_sheet_02.png" id="1_vb34c"]
+[ext_resource type="Texture2D" uid="uid://bnwvafghwlv86" path="res://Assets/SpriteSheets/Sprite_sheet_02.png" id="1_vb34c"]
 [ext_resource type="Resource" uid="uid://bxry37ogcb3nd" path="res://Upgrades/transport_speed.tres" id="2_kd1kk"]
 [ext_resource type="Script" path="res://Objects/Scripts/Transporter/StateMachine/StateMachine.gd" id="2_nwyt7"]
 [ext_resource type="Resource" uid="uid://cs3ttvobr7kr2" path="res://Upgrades/transport_quantity.tres" id="3_kwnor"]
 [ext_resource type="Script" path="res://Objects/Scripts/Transporter/StateMachine/GetStone.gd" id="3_o3ubf"]
 [ext_resource type="Script" path="res://Objects/Scripts/Transporter/StateMachine/PickUpStone.gd" id="4_wgq5y"]
 [ext_resource type="Script" path="res://Objects/Scripts/Transporter/StateMachine/DeliverStone.gd" id="5_1qbh2"]
-[ext_resource type="Texture2D" uid="uid://bxqtllalv6j8b" path="res://Assets/Sprite_sheet_04.png" id="5_7fki6"]
+[ext_resource type="Texture2D" uid="uid://bxqtllalv6j8b" path="res://Assets/SpriteSheets/Sprite_sheet_04.png" id="5_7fki6"]
 [ext_resource type="Script" path="res://Objects/Scripts/Transporter/StateMachine/PlaceStone.gd" id="7_ukimv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y0fnv"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1w3fag6thltr"
-path="res://.godot/imported/Towers_floor_1.png-cb856aac58d870a320a191b736174065.ctex"
+uid="uid://d3bjtpby1bc77"
+path="res://.godot/imported/flame_icon.png-b625435c54c31c343f991f0f8ed7f9c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Towers_floor_1.png"
-dest_files=["res://.godot/imported/Towers_floor_1.png-cb856aac58d870a320a191b736174065.ctex"]
+source_file="res://Assets/UI/Icons/flame_icon.png"
+dest_files=["res://.godot/imported/flame_icon.png-b625435c54c31c343f991f0f8ed7f9c2.ctex"]
 
 [params]
 
