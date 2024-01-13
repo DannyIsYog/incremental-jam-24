@@ -4,7 +4,7 @@ class_name GameManager
 
 @onready var silver_coins = 0
 @onready var divine_coins = 0
-@onready var wallet_ui : wallet = $"../Camera/UI"
+@onready var wallet_ui : wallet = $"../Camera/CanvasLayer/UI"
 
 
 # Called when the node enters the scene tree for the first time.

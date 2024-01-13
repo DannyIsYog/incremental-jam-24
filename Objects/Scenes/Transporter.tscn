@@ -193,7 +193,7 @@ animation = &"Pick_Up"
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("2_nwyt7")
-initial_state = NodePath("DeliverStone")
+initial_state = NodePath("GetStone")
 
 [node name="GetStone" type="Node" parent="StateMachine"]
 script = ExtResource("3_o3ubf")
