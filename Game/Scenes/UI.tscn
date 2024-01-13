@@ -138,7 +138,7 @@ tooltip_text = "Increase Mined Stoned"
 upgrade = ExtResource("10_ahxc6")
 icon = ExtResource("11_266mb")
 upgrade_name = "Quarry Efficiency"
-tool_tip = "Increases Stoned mined by the miners"
+tool_tip = "Increases stones mined by the miners"
 upgrade_type = 0
 currency_type = 0
 
