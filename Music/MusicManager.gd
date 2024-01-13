@@ -10,7 +10,7 @@ extends Node2D
 @export var fase8 : AudioStreamWAV
 @onready var audio_stream_player_2d = $AudioStreamPlayer2D
 
-var andar
+var andar = 0
 
 func _ready():
 	#play fase 1
@@ -22,10 +22,8 @@ func _process(delta):
 	
 	if andar <= 8:
 		audio_stream_player_2d.stream = fase1
-	if 12 <= andar <= 20:
+	if  12 <= andar  && andar <= 20:
 		audio_stream_player_2d.stream = fase2
-		
-	pass
 
 func change_song_to(song):
 	audio_stream_player_2d.stream = song
