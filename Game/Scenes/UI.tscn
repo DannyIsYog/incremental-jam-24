@@ -129,6 +129,7 @@ upgrade = ExtResource("3_8m3ps")
 icon = ExtResource("4_ddgs5")
 upgrade_name = "Click Value"
 tool_tip = "Increases stones mined by clicks"
+upgrade_type = 0
 currency_type = 0
 
 [node name="MineQuantityAdditiveUpgrade" parent="ScrollContainer/GridContainer" instance=ExtResource("2_3b2jv")]
@@ -138,6 +139,7 @@ upgrade = ExtResource("10_ahxc6")
 icon = ExtResource("11_266mb")
 upgrade_name = "Quarry Efficiency"
 tool_tip = "Increases Stoned mined by the miners"
+upgrade_type = 0
 currency_type = 0
 
 [node name="DrillUpgrade" parent="ScrollContainer/GridContainer" instance=ExtResource("2_3b2jv")]
@@ -147,6 +149,7 @@ upgrade = ExtResource("12_5dq2i")
 icon = ExtResource("13_uhs1o")
 upgrade_name = "Drill <Unique>"
 tool_tip = "Increases the Mining Speed of the Miners"
+upgrade_type = 0
 currency_type = 0
 
 [node name="BulkTransportation" parent="ScrollContainer/GridContainer" instance=ExtResource("2_3b2jv")]
@@ -156,6 +159,7 @@ upgrade = ExtResource("14_n2wmk")
 icon = ExtResource("15_nyn8n")
 upgrade_name = "Bulk Transport"
 tool_tip = "Increases the quantity of stones transported by transporters"
+upgrade_type = 0
 currency_type = 0
 
 [node name="WohnJhinUpgrade" parent="ScrollContainer/GridContainer" instance=ExtResource("2_3b2jv")]
@@ -164,6 +168,7 @@ upgrade = ExtResource("16_kioep")
 icon = ExtResource("17_q6bf5")
 upgrade_name = "Wohn Jick"
 tool_tip = "Increases the movement speed of the transporters"
+upgrade_type = 0
 currency_type = 0
 
 [node name="Temple" parent="ScrollContainer/GridContainer" instance=ExtResource("2_3b2jv")]
@@ -172,4 +177,5 @@ upgrade = ExtResource("18_73rvd")
 icon = ExtResource("19_82w00")
 upgrade_name = "Temple"
 tool_tip = "Increases the protection against lightning stikes"
+upgrade_type = 0
 currency_type = 1

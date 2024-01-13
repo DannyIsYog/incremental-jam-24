@@ -12,7 +12,7 @@ extends Node2D
 
 func _ready():
 	#play fase 1
-	audio_stream_player_2d.play(fase1)
+	#audio_stream_player_2d.play(fase1)
 	pass
 
 func _process(delta):

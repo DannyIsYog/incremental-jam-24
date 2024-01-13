@@ -50,6 +50,9 @@ func can_buy() -> bool:
 	if unique && bought:
 		return false
 	if currency_type == 0:
+		print("new")
+		print(wallet_ui.game_manager.silver_coins)
+		print(upgrade.get_price())
 		return wallet_ui.game_manager.silver_coins >= upgrade.get_price()
 	else:
 		return wallet_ui.game_manager.divine_coins >= upgrade.get_price()
@@ -59,14 +62,14 @@ func buy_upgrade():
 		wallet_ui.game_manager.remove_silver_coins(upgrade.get_price())
 	else:
 		wallet_ui.game_manager.remove_divine_coins(upgrade.get_price())
-	update_next_upgrade_cost_text()
-	update_upgrade_level_text()
-	wallet_ui.update_wallet()
-	bought = true
 	if upgrade_type == 0:
 		upgrade.upgrade_bv()
 	elif upgrade_type == 1:
 		upgrade.upgrade_multiplier()
+	update_next_upgrade_cost_text()
+	update_upgrade_level_text()
+	wallet_ui.update_wallet()
+	bought = true
 	print(upgrade.total_value)
 	update_tool_tip_text()
 
