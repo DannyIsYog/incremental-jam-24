@@ -1,24 +1,24 @@
 [gd_scene load_steps=10 format=3 uid="uid://dmi48l3hyiif0"]
 
 [ext_resource type="Script" path="res://Music/MusicManager.gd" id="1_yml0h"]
-[ext_resource type="AudioStream" uid="uid://cijb86f0kqegf" path="res://Music/fase 1 de andares - Dreams Become Real.wav" id="2_xladd"]
-[ext_resource type="AudioStream" uid="uid://chhen1tbx0xrc" path="res://Music/fase 2 de andares - Ascending the Vale - Kevin MacLeod.wav" id="3_wha0f"]
-[ext_resource type="AudioStream" uid="uid://k6sx1ly8sov4" path="res://Music/fase 3 de andares - lofi-vibes-113884 (1).wav" id="4_wtgqo"]
-[ext_resource type="AudioStream" uid="uid://1uya8dofxi3h" path="res://Music/fase 4 de andares - contemporary-epic-trailer-119870.wav" id="5_aq8q2"]
-[ext_resource type="AudioStream" uid="uid://c2ngtnuwqkoee" path="res://Music/fase 5 de andares - Scott Buckley - _Ascension_ [Emotional Hybrid Orchestral CC-BY].wav" id="6_ibg87"]
-[ext_resource type="AudioStream" uid="uid://ck76h3u7eb3vw" path="res://Music/fase 6 de andares - _Pathfinder_ [Epic Adventure Orchestral CC-BY] - Scott Buckley.wav" id="7_2f44q"]
-[ext_resource type="AudioStream" uid="uid://ciln427jrrfpx" path="res://Music/fase 7 de andares - o jogador está perto do fim - Patrick Patrikios - The Awakening.wav" id="8_yaplf"]
-[ext_resource type="AudioStream" uid="uid://dg7y5hh57mgl4" path="res://Music/fase 8 - Evolution.wav" id="9_d74nt"]
+[ext_resource type="AudioStream" uid="uid://cijb86f0kqegf" path="res://Music/fase 1 de andares - Dreams Become Real.wav" id="2_2dhms"]
+[ext_resource type="AudioStream" uid="uid://chhen1tbx0xrc" path="res://Music/fase 2 de andares - Ascending the Vale - Kevin MacLeod.wav" id="3_w72ll"]
+[ext_resource type="AudioStream" uid="uid://k6sx1ly8sov4" path="res://Music/fase 3 de andares - lofi-vibes-113884 (1).wav" id="4_64ksm"]
+[ext_resource type="AudioStream" uid="uid://1uya8dofxi3h" path="res://Music/fase 4 de andares - contemporary-epic-trailer-119870.wav" id="5_yp738"]
+[ext_resource type="AudioStream" uid="uid://c2ngtnuwqkoee" path="res://Music/fase 5 de andares - Scott Buckley - _Ascension_ [Emotional Hybrid Orchestral CC-BY].wav" id="6_1mb7g"]
+[ext_resource type="AudioStream" uid="uid://ck76h3u7eb3vw" path="res://Music/fase 6 de andares - _Pathfinder_ [Epic Adventure Orchestral CC-BY] - Scott Buckley.wav" id="7_mw0ju"]
+[ext_resource type="AudioStream" uid="uid://ciln427jrrfpx" path="res://Music/fase 7 de andares - o jogador está perto do fim - Patrick Patrikios - The Awakening.wav" id="8_mfp3h"]
+[ext_resource type="AudioStream" uid="uid://dg7y5hh57mgl4" path="res://Music/fase 8 - Evolution.wav" id="9_dh6kn"]
 
 [node name="MusicManager" type="Node2D"]
 script = ExtResource("1_yml0h")
-fase1 = ExtResource("2_xladd")
-fase2 = ExtResource("3_wha0f")
-fase3 = ExtResource("4_wtgqo")
-fase4 = ExtResource("5_aq8q2")
-fase5 = ExtResource("6_ibg87")
-fase6 = ExtResource("7_2f44q")
-fase7 = ExtResource("8_yaplf")
-fase8 = ExtResource("9_d74nt")
+fase1 = ExtResource("2_2dhms")
+fase2 = ExtResource("3_w72ll")
+fase3 = ExtResource("4_64ksm")
+fase4 = ExtResource("5_yp738")
+fase5 = ExtResource("6_1mb7g")
+fase6 = ExtResource("7_mw0ju")
+fase7 = ExtResource("8_mfp3h")
+fase8 = ExtResource("9_dh6kn")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
