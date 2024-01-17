@@ -8,7 +8,7 @@ class_name Tower
 @onready var game_manager : GameManager = get_parent()
 @onready var starting_waypoint = $StartingWaypoint
 
-
+signal floorChange
 
 var stone_needed_per_floor : float = 100.0
 var floors_instances = []
@@ -25,6 +25,7 @@ func _process(delta):
 		update_text()
 	if Input.is_action_just_pressed("lightning"):
 		remove_floor()
+		emit_signal("floorChange")
 
 func add_stone(stone_to_add : float) -> void:
 	current_floor_completion += stone_to_add
@@ -41,6 +42,7 @@ func check_floor_completion() -> void:
 func add_floor(floor : int) -> void:
 	var temp_floor = floors_scene.instantiate() as Floor
 	floors_instances.append(temp_floor)
+	emit_signal("floorChange")
 	temp_floor.position = Vector2(0, 0 - (temp_floor.get_floor_height()-4) * floors_instances.size())
 	if (flip):
 		temp_floor.scale.x *= -1

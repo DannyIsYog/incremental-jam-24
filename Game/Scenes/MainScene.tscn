@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://isxf8l7s834a"]
+[gd_scene load_steps=17 format=3 uid="uid://isxf8l7s834a"]
 
 [ext_resource type="PackedScene" uid="uid://c2juilqsgan7t" path="res://Objects/Scenes/Quarry/quarry.tscn" id="1_1etx6"]
 [ext_resource type="Script" path="res://Game/Scripts/game_manager.gd" id="1_46ufe"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dd5ufnsu5cdyy" path="res://Objects/Scenes/Transporter.tscn" id="9_lfpmi"]
 [ext_resource type="Resource" uid="uid://dufgvosrr7q38" path="res://Upgrades/divine_coins_earn_rate.tres" id="9_p0mwy"]
 [ext_resource type="Script" path="res://Game/Scripts/camera.gd" id="9_uwiqw"]
+[ext_resource type="PackedScene" uid="uid://dmi48l3hyiif0" path="res://Music/MusicManager.tscn" id="16_2kkh5"]
 
 [node name="Game" type="Node2D"]
 
@@ -79,6 +80,9 @@ script = ExtResource("9_uwiqw")
 [node name="UI" parent="Camera/CanvasLayer" node_paths=PackedStringArray("game_manager") instance=ExtResource("4_87ur8")]
 z_index = 1000
 game_manager = NodePath("../../../GameManager")
+
+[node name="MusicManager" parent="." node_paths=PackedStringArray("tower") instance=ExtResource("16_2kkh5")]
+tower = NodePath("../GameManager/Tower")
 
 [node name="Transporters" type="Node" parent="."]
 
